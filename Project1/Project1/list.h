@@ -1,7 +1,7 @@
 #pragma once
 #include <stdio.h>
 #include "types.h"
-#include 
+#include "fourstate.h"
 
 //这个头文件中声明了有关符号表的相关声明与结构
 

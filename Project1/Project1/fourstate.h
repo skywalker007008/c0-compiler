@@ -8,7 +8,7 @@ typedef enum {
 	assign,
 	get_addr,
 	write_stack, read_stack,
-	jump, jumpif, jumpifn, jump_link, jump_backto,
+	jump, jump_ifnz, jump_ifz, jump_link, jump_backto,
 	read_char, read_int,
 	write_char, write_int, write_string,
 	set_label, set_func
@@ -21,10 +21,10 @@ typedef enum {
 
 typedef struct CODE4{
 	STATE4_OP op;
-	string rs;
-	string rt;
-	string rd;
-	string label;
+	char* rs;
+	char* rt;
+	char* rd;
+	char* label;
 	struct CODE4* next_code4;
 }CODE4;
 //transfer funcs
@@ -33,4 +33,5 @@ char* var2str(char* var);
 char* const2str(char* cons);
 
 //store func
-void INSERT_4_STATE(FUNC* func, STATE4_OP op, string rs, string rt, string rd, string label);
+void INSERT_4_STATE(FUNC* func, STATE4_OP op, char* rs, char* rt, char* rd, char* label);
+char* string_add2(char* a, char* b);

@@ -781,7 +781,7 @@ int is_if_sentence(int pl, FUNC* func){
 	read_symbol();
 	judge = is_condition(sym_pl, func);
 	//v0是条件的结果
-	INSERT_4_STATE(func, jumpifn, "v0", NULL, NULL, "else");	//添加一个有关条件跳转的四元式
+	INSERT_4_STATE(func, jump_ifz, "v0", NULL, NULL, string_add2(func->name, "else"));	//添加一个有关条件跳转的四元式
 	if(judge != MATCH){
 		error();
 	}
@@ -794,19 +794,19 @@ int is_if_sentence(int pl, FUNC* func){
 		error();
 	}
 	if(sym != elsesy){	//没有else可以结束了
-		INSERT_4_STATE(func, jump, NULL, NULL, NULL, "end");	//if的终结
+		INSERT_4_STATE(func, jump, NULL, NULL, NULL, string_add2(func->name, "end"));	//if的终结
 		end_line = last_symbol->line;
 		fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a condition sentence(without else).\n", start_line, end_line, pl, sym_pl - 1);
 		return MATCH;
 	}
 	read_symbol();
-	INSERT_4_STATE(func, set_label, NULL, NULL, NULL, "else");	//设置一个else的标记点
+	INSERT_4_STATE(func, set_label, NULL, NULL, NULL, string_add2(func->name, "else"));	//设置一个else的标记点
 	judge = is_sentence(sym_pl, func);
 	if(judge != MATCH){
 		error();
 	}
 	//理论上……else不需要end，但是if需要啊，所以还是要加end标签，但不需要加jump end的四元式
-	INSERT_4_STATE(func, set_label, NULL, NULL, NULL, "end");	//设置end标签
+	INSERT_4_STATE(func, set_label, NULL, NULL, NULL, string_add2(func->name, "end"));	//设置end标签
 	end_line = last_symbol->line;
 	fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a condition sentence(with else).\n", start_line, end_line, pl, sym_pl - 1);
 	return MATCH;
@@ -819,7 +819,7 @@ int is_if_sentence(int pl, FUNC* func){
 int is_func_usage(int pl, FUNC* func){
 	int judge;
 	int start_line, end_line;
-	char name[ID_MAX_LENGTH];
+	char *name;
 	start_line = now_symbol->line;
 	sym = now_symbol->symbol_type;
 	//这里会比较麻烦，因为涉及一个保存现场的问题
@@ -830,7 +830,7 @@ int is_func_usage(int pl, FUNC* func){
 	if(sym != ident){
 		error();
 	}
-	strcpy(name, now_symbol->symbol_name);	//函数名字
+	name = now_symbol->symbol_name;
 	read_symbol();
 	if(sym != lparent){	//没有参数
 		//这里似乎要比一下参数个数的样子
@@ -1044,9 +1044,10 @@ int is_return(int pl, FUNC* func){
 	}
 	read_symbol();
 	judge = is_statement(sym_pl, func);
+	//我觉得这里总应该返回一个什么东西来告诉后面需要考虑其中组成的东西……这究竟是个什么结果
 	//这里的v0值我觉得不用动吧
 	INSERT_4_STATE(func, jump_backto, "ra", NULL, NULL, NULL);
-	if (return_type != func->type) {
+	if (return_type != func->type) {	//return_type应该是来自于STATEMENT的
 		error(return_type_mismatch);
 	}
 	if(judge != MATCH){
@@ -1065,17 +1066,25 @@ int is_return(int pl, FUNC* func){
 
 int is_circle_sentence(int pl, FUNC* func){
 	int judge;
+	int is_add = 1;
+	int step;
 	int start_line, end_line;
 	sym= now_symbol->symbol_type;
 	start_line = now_symbol->line;
+	char* c;
 
 	if(sym == whilesy){	//while循环体
+		//先输出一个while的标志符
+		c = string_add2(func->name, "while");
+		INSERT_4_STATE(func, set_label, NULL, NULL, NULL, c);
 		read_symbol();
 		if(sym != lparent){
 			error();
 		}
 		read_symbol();
 		judge = is_condition(sym_pl, func);
+		//添加判断条件
+		INSERT_4_STATE(func, jump_ifz, "v0", NULL, NULL, string_add2(func->name, "endwhile"));
 		if(judge != MATCH){
 			error();
 		}
@@ -1083,15 +1092,28 @@ int is_circle_sentence(int pl, FUNC* func){
 			error();
 		}
 		read_symbol();
+		//while的语句部分
 		judge = is_sentence(sym_pl, func);
 		if(judge != MATCH){
 			error();
 		}
+		//回到初始的while部分
+		INSERT_4_STATE(func, jump, NULL, NULL, NULL, c);
 		end_line = last_symbol->line;
 		fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a while-circle.\n", start_line, end_line, pl, sym_pl - 1);
 		return MATCH;
 	}
 	if(sym == forsy){	//for循环体
+		//for这东西，居然他喵的先执行，初值放在for循环之前
+		//为了调试方便这里还是加一个有关init_for的操作吧
+
+		/*
+		//for循环的结构是初值->条件->步长->表达式
+		//但是实际执行是：
+		//初值（条件）->表达式->步长->条件
+		//因此要设置很多的跳转指令
+		//除非在后续的MIPS中优化一下*/
+		INSERT_4_STATE(func, set_label, NULL, NULL, NULL, string_add2(func->name, "for_init"));
 		read_symbol();
 		if(sym != lparent){
 			error();
@@ -1100,12 +1122,20 @@ int is_circle_sentence(int pl, FUNC* func){
 		if(sym != ident){
 			error();
 		}
+		c = now_symbol->symbol_name;
 		read_symbol();
 		if(sym != assignsy){
 			error();
 		}
 		read_symbol();
 		judge = is_statement(sym_pl, func);
+		//先输出有关初值部分
+		INSERT_4_STATE(func, assign, "v0", NULL, c, NULL);
+		//链接到statement部分
+		INSERT_4_STATE(func, jump, NULL, NULL, NULL, string_add2(func->name, "for_statement"));
+		//接着输出for循环体
+		//第一个是条件项
+		INSERT_4_STATE(func, set_label, NULL, NULL, NULL, string_add2(func->name, "for_condition"));
 		if(judge != MATCH){
 			error();
 		}
@@ -1114,6 +1144,12 @@ int is_circle_sentence(int pl, FUNC* func){
 		}
 		read_symbol();
 		judge = is_condition(sym_pl, func);
+		//输出跳转比较
+		INSERT_4_STATE(func, jump_ifz, "v0", NULL, NULL, string_add2(func->name, "for_end"));
+		//连接到表达式部分
+		INSERT_4_STATE(func, jump, NULL, NULL, NULL, string_add2(func->name, "for_statement"));
+		//进入步长模式：
+
 		if(judge != MATCH){
 			error();
 		}
@@ -1121,9 +1157,11 @@ int is_circle_sentence(int pl, FUNC* func){
 			error();
 		}
 		read_symbol();
+		INSERT_4_STATE(func, set_label, NULL, NULL, NULL, string_add2(func->name, "for_step"));
 		if(sym != ident){
 			error();
 		}
+		c = now_symbol->symbol_name;
 		read_symbol();
 		if(sym != assignsy){
 			error();
@@ -1132,23 +1170,44 @@ int is_circle_sentence(int pl, FUNC* func){
 		if(sym != ident){
 			error();
 		}
+		if (strcmp(c, now_symbol->symbol_name) == 0) {
+			error(if_step_mismatch);
+		}
 		read_symbol();
 		if(sym != addsy && sym != minussy){
 			error();
 		}
+		is_add = sym == addsy ? 1 : -1;
 		read_symbol();
 		if(sym != uintsy){
 			error();
 		}
+		step = now_symbol->symbol_num;
 		read_symbol();
 		if(sym != rparent){
 			error();
 		}
+		//处理一下步长
+		if (is_add == 1) {
+			INSERT_4_STATE(func, add, c, int2str(step), c, NULL);
+		}
+		else if (is_add == -1) {
+			INSERT_4_STATE(func, sub, c, int2str(step), c, NULL);
+		}
 		read_symbol();
-		judge = is_sentence(sym_pl, minussy);
+		//连接到条件部分
+		INSERT_4_STATE(func, jump, NULL, NULL, NULL, string_add2(func->name, "for_condition"));
+		//输出一个有关语句段的标志
+		INSERT_4_STATE(func, set_label, NULL, NULL, NULL, string_add2(func->name, "for_sentences"));
+		judge = is_sentence(sym_pl, func);
 		if(judge != MATCH){
 			error();
 		}
+		//链接到步长段
+		INSERT_4_STATE(func, jump, NULL, NULL, NULL, string_add2(func->name, "for_steps"));
+		//最后输出for_end
+		INSERT_4_STATE(func, set_label, NULL, NULL, NULL, string_add2(func->name, "for_end"));
+		s
 		end_line = last_symbol->line;
 		fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a if-circle sentence.\n", start_line, end_line, pl, sym_pl - 1);
 		return MATCH;

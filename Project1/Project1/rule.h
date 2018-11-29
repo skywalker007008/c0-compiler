@@ -18,7 +18,7 @@ typedef enum {
 	func_undefined,
 	func_redefined,
 	return_type_mismatch,
-
+	if_step_mismatch
 }error_msg;
 
 
