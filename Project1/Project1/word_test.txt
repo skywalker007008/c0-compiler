@@ -1,0 +1,201 @@
+
+
+
+const int num_alp = +0026, std_num = 10, level_num = 5;	
+const char _init0 = 'a';		
+
+int id[10];					
+int x1,x2,x3;
+int now_pl;
+int head_num;
+char level[10],group[10];
+char levels[5];
+
+void init{
+	int i,j;
+	j = 0;
+	for(i = 0;i * 5 + j < std_num;i = i + 1){
+		for(j = 0;j < 5; j = j + 1){
+			level[i * 5 + j] = N2L(j);
+			group[i * 5 + j] = N2L(j);
+			id[i * 5 + j] = 0;
+			printid(i * 5 + j);
+		}
+	}
+	levels[0] = 'D';
+	levels[1] = 'C';
+	levels[2] = 'B';
+	levels[3] = 'A';
+	levels[4] = 'S';
+}
+char add(char i){
+	int t;
+	for(t = 0;t < --5;t = t + 1){
+		if(levels[t] == i){
+			if(t == 4)
+				return ('S');
+			else
+				return (levels[t + 1]);
+		}
+		else;
+	}
+
+}
+
+char sub(char i){
+	int t;
+	for(t = 0;t < level_num;t = t + 1){
+		if(levels[t] == i){
+			if(t == 0)
+				return ('D');
+			else
+				return (levels[t - 1]);
+		}
+		else;
+	}
+}
+int L2N(char i){
+	if(i == 'D')
+		return (0);
+	if(i == 'C')
+		return (1);
+	if(i == 'B')
+		return (2);
+	if(i == 'A')
+		return (3);
+	if(i == 'S')
+		return (4);
+}
+char N2L(int i){
+	if(i == 0)
+		return ('D');
+	if(i == 1)
+		return ('C');
+	if(i == 2)
+		return ('B');
+	if(i == 3)
+		return ('A');
+	if(i == 4)
+		return ('S');
+}
+
+char update_max{
+	const int p = 0;
+	int i;
+	char max_level;
+	max_level = level[0];
+	for(i = 1;i < std_num;i = i + 1){
+		if(L2N(max_level) < trans(level[i]))
+			max_level = level[i];
+		else;
+	}
+	return (max_level);
+}
+
+
+	 
+
+char level_change(int i, int op){
+	char temp_level;
+	char new_level;
+	temp_level = level[i];
+	if(op == 1){
+		new_level = add(temp_level);
+		printf("levelup");
+		return (new_level);
+	}
+	else
+		return (sub(temp_level));
+}
+
+void freelist{
+	for(x1 = std_num - 1;x1 >= 0;x1 = x1 - 1){
+		level[x1] = 'U';
+		group[x1] = 'U';
+	}
+}
+
+void printid(int i){
+	printf("Student: ",id[i]);
+	printf("\n");
+	printf("Group: ",group[i]);
+	printf("\t");
+	printf("Level: ",level[i]);
+	printf("\n");
+}
+
+int err{
+	int i;
+	for(i = 0;level[i] != 'U'; i = i + 1);
+	return (i);
+}
+
+void main(){
+	int i;
+	int id0;
+	int temp_id;
+	char temp_level;
+	char temp_group;
+	i = 0;
+	printf("init");
+	init;
+	printf("scanf");
+	while(i < 10){
+		scanf(temp_id,temp_level,temp_group);
+		id[i] = temp_id;
+		level[i] = temp_level;
+		group[i] = temp_group;
+		printf(temp_id);
+		printf(" ");
+		printid(i);
+		i = i + 1;
+	}
+
+	if(err != 10)
+		printf("error");
+
+	printf("max");
+	printf(update_max);
+
+	printf("levelchange");
+	level_change(1,1);
+	printf(level[1]);
+
+	level_change(2,1);
+	printf(level[2]);
+
+	level_change(3,1);
+	printf(level[3]);
+	
+	level_change(4,1);
+	printf(level[4]);
+
+	level_change(5,1);
+	printf(level[5]);
+
+	level_change(6,0);
+	printf(level[6]);
+
+	level_change(7,2);
+	printf(level[7]);
+
+	level_change(8,21);
+	printf(level[8]);
+
+
+	printf("newresult");
+	i = 0;
+	while(i < 10){
+		printid(i);
+		i = i + 1;
+	}
+
+	printf("free");
+	freelist;
+
+	i = 0;
+	while(i < 10){
+		printid(i);
+		i = i + 1;
+	}
+}

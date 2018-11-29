@@ -1,0 +1,1002 @@
+Line 4 ~ 4:	5 ~ 6:	This is an integer.
+Line 4 ~ 4:	10 ~ 10:	This is an integer.
+Line 4 ~ 4:	14 ~ 14:	This is an integer.
+Line 4 ~ 4:	word from 2 ~ 14	This is an int definition.
+Line 5 ~ 5:	word from 17 ~ 20	This is a char definition.
+Line 4 ~ 5:	word from 1 ~ 21	This is const option.
+Line 7 ~ 7:	22 ~ 26:	This is a var's definition.
+Line 7 ~ 7:	word from 22 ~ 27	This is a var option.
+Line 8 ~ 8:	28 ~ 33:	This is a var's definition.
+Line 9 ~ 9:	35 ~ 36:	This is a var's definition.
+Line 10 ~ 10:	38 ~ 39:	This is a var's definition.
+Line 7 ~ 10:	word from 22 ~ 40	This is a var option.
+Line 11 ~ 11:	41 ~ 50:	This is a var's definition.
+Line 7 ~ 11:	word from 22 ~ 51	This is a var option.
+Line 12 ~ 12:	52 ~ 56:	This is a var's definition.
+Line 7 ~ 12:	word from 22 ~ 57	This is a var option.
+Line 15 ~ 15:	61 ~ 64:	This is a var's definition.
+Line 15 ~ 15:	word from 61 ~ 65	This is a var option.
+Line 16 ~ 16:	68 ~ 68:	This is an integer.
+Line 16 ~ 16:	68 ~ 68:	This is a factor.
+Line 16 ~ 16:	68 ~ 68:	This is a part.
+Line 16 ~ 16:	68 ~ 68:	This is a statement.
+Line 16 ~ 16:	66 ~ 68:	This is an assign sentence.
+Line 16 ~ 16:	66 ~ 69:	This is a sentence(assign).
+Line 17 ~ 17:	74 ~ 74:	This is an integer.
+Line 17 ~ 17:	74 ~ 74:	This is a factor.
+Line 17 ~ 17:	74 ~ 74:	This is a part.
+Line 17 ~ 17:	74 ~ 74:	This is a statement.
+Line 17 ~ 17:	76 ~ 76:	This is a factor.
+Line 17 ~ 17:	78 ~ 78:	This is an integer.
+Line 17 ~ 17:	78 ~ 78:	This is a factor.
+Line 17 ~ 17:	76 ~ 78:	This is a part.
+Line 17 ~ 17:	80 ~ 80:	This is a factor.
+Line 17 ~ 17:	80 ~ 80:	This is a part.
+Line 17 ~ 17:	76 ~ 80:	This is a statement.
+Line 17 ~ 17:	82 ~ 82:	This is a factor.
+Line 17 ~ 17:	82 ~ 82:	This is a part.
+Line 17 ~ 17:	82 ~ 82:	This is a statement.
+Line 17 ~ 17:	76 ~ 82:	This is a condition.
+Line 18 ~ 18:	95 ~ 95:	This is an integer.
+Line 18 ~ 18:	95 ~ 95:	This is a factor.
+Line 18 ~ 18:	95 ~ 95:	This is a part.
+Line 18 ~ 18:	95 ~ 95:	This is a statement.
+Line 18 ~ 18:	97 ~ 97:	This is a factor.
+Line 18 ~ 18:	97 ~ 97:	This is a part.
+Line 18 ~ 18:	97 ~ 97:	This is a statement.
+Line 18 ~ 18:	99 ~ 99:	This is an integer.
+Line 18 ~ 18:	99 ~ 99:	This is a factor.
+Line 18 ~ 18:	99 ~ 99:	This is a part.
+Line 18 ~ 18:	99 ~ 99:	This is a statement.
+Line 18 ~ 18:	97 ~ 99:	This is a condition.
+Line 19 ~ 19:	110 ~ 110:	This is a factor.
+Line 19 ~ 19:	112 ~ 112:	This is an integer.
+Line 19 ~ 19:	112 ~ 112:	This is a factor.
+Line 19 ~ 19:	110 ~ 112:	This is a part.
+Line 19 ~ 19:	114 ~ 114:	This is a factor.
+Line 19 ~ 19:	114 ~ 114:	This is a part.
+Line 19 ~ 19:	110 ~ 114:	This is a statement.
+Line 19 ~ 19:	119 ~ 119:	This is a factor.
+Line 19 ~ 19:	119 ~ 119:	This is a part.
+Line 19 ~ 19:	119 ~ 119:	This is a statement.
+Line 19 ~ 19:	119 ~ 119:	This is a value_args_list.
+Line 19 ~ 19:	117 ~ 120:	This is a factor.
+Line 19 ~ 19:	117 ~ 120:	This is a part.
+Line 19 ~ 19:	117 ~ 120:	This is a statement.
+Line 19 ~ 19:	108 ~ 120:	This is an assign sentence.
+Line 19 ~ 19:	108 ~ 121:	This is a sentence(assign).
+Line 20 ~ 20:	124 ~ 124:	This is a factor.
+Line 20 ~ 20:	126 ~ 126:	This is an integer.
+Line 20 ~ 20:	126 ~ 126:	This is a factor.
+Line 20 ~ 20:	124 ~ 126:	This is a part.
+Line 20 ~ 20:	128 ~ 128:	This is a factor.
+Line 20 ~ 20:	128 ~ 128:	This is a part.
+Line 20 ~ 20:	124 ~ 128:	This is a statement.
+Line 20 ~ 20:	133 ~ 133:	This is a factor.
+Line 20 ~ 20:	133 ~ 133:	This is a part.
+Line 20 ~ 20:	133 ~ 133:	This is a statement.
+Line 20 ~ 20:	133 ~ 133:	This is a value_args_list.
+Line 20 ~ 20:	131 ~ 134:	This is a factor.
+Line 20 ~ 20:	131 ~ 134:	This is a part.
+Line 20 ~ 20:	131 ~ 134:	This is a statement.
+Line 20 ~ 20:	122 ~ 134:	This is an assign sentence.
+Line 20 ~ 20:	122 ~ 135:	This is a sentence(assign).
+Line 21 ~ 21:	138 ~ 138:	This is a factor.
+Line 21 ~ 21:	140 ~ 140:	This is an integer.
+Line 21 ~ 21:	140 ~ 140:	This is a factor.
+Line 21 ~ 21:	138 ~ 140:	This is a part.
+Line 21 ~ 21:	142 ~ 142:	This is a factor.
+Line 21 ~ 21:	142 ~ 142:	This is a part.
+Line 21 ~ 21:	138 ~ 142:	This is a statement.
+Line 21 ~ 21:	145 ~ 145:	This is an integer.
+Line 21 ~ 21:	145 ~ 145:	This is a factor.
+Line 21 ~ 21:	145 ~ 145:	This is a part.
+Line 21 ~ 21:	145 ~ 145:	This is a statement.
+Line 21 ~ 21:	136 ~ 145:	This is an assign sentence.
+Line 21 ~ 21:	136 ~ 146:	This is a sentence(assign).
+Line 22 ~ 22:	149 ~ 149:	This is a factor.
+Line 22 ~ 22:	151 ~ 151:	This is an integer.
+Line 22 ~ 22:	151 ~ 151:	This is a factor.
+Line 22 ~ 22:	149 ~ 151:	This is a part.
+Line 22 ~ 22:	153 ~ 153:	This is a factor.
+Line 22 ~ 22:	153 ~ 153:	This is a part.
+Line 22 ~ 22:	149 ~ 153:	This is a statement.
+Line 22 ~ 22:	149 ~ 153:	This is a value_args_list.
+Line 22 ~ 22:	147 ~ 154:	This is a func_usage sentence(with args).
+Line 22 ~ 22:	147 ~ 155:	This is a sentence(with_args_func_usage).
+Line 19 ~ 22:	108 ~ 155:	This is a sentence_list.
+Line 18 ~ 23:	107 ~ 156:	This is a sentence(sent_list).
+Line 18 ~ 23:	91 ~ 156:	This is a if-circle sentence.
+Line 18 ~ 23:	91 ~ 156:	This is a sentence(circle).
+Line 18 ~ 23:	91 ~ 156:	This is a sentence_list.
+Line 17 ~ 24:	90 ~ 157:	This is a sentence(sent_list).
+Line 17 ~ 24:	70 ~ 157:	This is a if-circle sentence.
+Line 17 ~ 24:	70 ~ 157:	This is a sentence(circle).
+Line 25 ~ 25:	160 ~ 160:	This is an integer.
+Line 25 ~ 25:	160 ~ 160:	This is a factor.
+Line 25 ~ 25:	160 ~ 160:	This is a part.
+Line 25 ~ 25:	160 ~ 160:	This is a statement.
+Line 25 ~ 25:	163 ~ 163:	This is a factor.
+Line 25 ~ 25:	163 ~ 163:	This is a part.
+Line 25 ~ 25:	163 ~ 163:	This is a statement.
+Line 25 ~ 25:	158 ~ 163:	This is an assign sentence.
+Line 25 ~ 25:	158 ~ 164:	This is a sentence(assign).
+Line 26 ~ 26:	167 ~ 167:	This is an integer.
+Line 26 ~ 26:	167 ~ 167:	This is a factor.
+Line 26 ~ 26:	167 ~ 167:	This is a part.
+Line 26 ~ 26:	167 ~ 167:	This is a statement.
+Line 26 ~ 26:	170 ~ 170:	This is a factor.
+Line 26 ~ 26:	170 ~ 170:	This is a part.
+Line 26 ~ 26:	170 ~ 170:	This is a statement.
+Line 26 ~ 26:	165 ~ 170:	This is an assign sentence.
+Line 26 ~ 26:	165 ~ 171:	This is a sentence(assign).
+Line 27 ~ 27:	174 ~ 174:	This is an integer.
+Line 27 ~ 27:	174 ~ 174:	This is a factor.
+Line 27 ~ 27:	174 ~ 174:	This is a part.
+Line 27 ~ 27:	174 ~ 174:	This is a statement.
+Line 27 ~ 27:	177 ~ 177:	This is a factor.
+Line 27 ~ 27:	177 ~ 177:	This is a part.
+Line 27 ~ 27:	177 ~ 177:	This is a statement.
+Line 27 ~ 27:	172 ~ 177:	This is an assign sentence.
+Line 27 ~ 27:	172 ~ 178:	This is a sentence(assign).
+Line 28 ~ 28:	181 ~ 181:	This is an integer.
+Line 28 ~ 28:	181 ~ 181:	This is a factor.
+Line 28 ~ 28:	181 ~ 181:	This is a part.
+Line 28 ~ 28:	181 ~ 181:	This is a statement.
+Line 28 ~ 28:	184 ~ 184:	This is a factor.
+Line 28 ~ 28:	184 ~ 184:	This is a part.
+Line 28 ~ 28:	184 ~ 184:	This is a statement.
+Line 28 ~ 28:	179 ~ 184:	This is an assign sentence.
+Line 28 ~ 28:	179 ~ 185:	This is a sentence(assign).
+Line 29 ~ 29:	188 ~ 188:	This is an integer.
+Line 29 ~ 29:	188 ~ 188:	This is a factor.
+Line 29 ~ 29:	188 ~ 188:	This is a part.
+Line 29 ~ 29:	188 ~ 188:	This is a statement.
+Line 29 ~ 29:	191 ~ 191:	This is a factor.
+Line 29 ~ 29:	191 ~ 191:	This is a part.
+Line 29 ~ 29:	191 ~ 191:	This is a statement.
+Line 29 ~ 29:	186 ~ 191:	This is an assign sentence.
+Line 29 ~ 29:	186 ~ 192:	This is a sentence(assign).
+Line 16 ~ 29:	66 ~ 192:	This is a sentence_list.
+Line 15 ~ 29:	61 ~ 192:	This is composed sentences.
+Line 14 ~ 30:	58 ~ 193:	This is a void-func declaration.
+Line 31 ~ 31:	word from 194 ~ 195	This is a head declaration.
+Line 31 ~ 31:	197 ~ 198:	This is an args_list.
+Line 32 ~ 32:	201 ~ 202:	This is a var's definition.
+Line 32 ~ 32:	word from 201 ~ 203	This is a var option.
+Line 33 ~ 33:	208 ~ 208:	This is an integer.
+Line 33 ~ 33:	208 ~ 208:	This is a factor.
+Line 33 ~ 33:	208 ~ 208:	This is a part.
+Line 33 ~ 33:	208 ~ 208:	This is a statement.
+Line 33 ~ 33:	210 ~ 210:	This is a factor.
+Line 33 ~ 33:	210 ~ 210:	This is a part.
+Line 33 ~ 33:	210 ~ 210:	This is a statement.
+Line 33 ~ 33:	213 ~ 214:	This is an integer.
+Line 33 ~ 33:	213 ~ 214:	This is a factor.
+Line 33 ~ 33:	213 ~ 214:	This is a part.
+Line 33 ~ 33:	212 ~ 214:	This is a statement.
+Line 33 ~ 33:	210 ~ 214:	This is a condition.
+Line 34 ~ 34:	227 ~ 227:	This is a factor.
+Line 34 ~ 34:	227 ~ 227:	This is a part.
+Line 34 ~ 34:	227 ~ 227:	This is a statement.
+Line 34 ~ 34:	225 ~ 228:	This is a factor.
+Line 34 ~ 34:	225 ~ 228:	This is a part.
+Line 34 ~ 34:	225 ~ 228:	This is a statement.
+Line 34 ~ 34:	230 ~ 230:	This is a factor.
+Line 34 ~ 34:	230 ~ 230:	This is a part.
+Line 34 ~ 34:	230 ~ 230:	This is a statement.
+Line 34 ~ 34:	225 ~ 230:	This is a condition.
+Line 35 ~ 35:	235 ~ 235:	This is a factor.
+Line 35 ~ 35:	235 ~ 235:	This is a part.
+Line 35 ~ 35:	235 ~ 235:	This is a statement.
+Line 35 ~ 35:	237 ~ 237:	This is an integer.
+Line 35 ~ 35:	237 ~ 237:	This is a factor.
+Line 35 ~ 35:	237 ~ 237:	This is a part.
+Line 35 ~ 35:	237 ~ 237:	This is a statement.
+Line 35 ~ 35:	235 ~ 237:	This is a condition.
+Line 36 ~ 36:	241 ~ 241:	This is a factor.
+Line 36 ~ 36:	241 ~ 241:	This is a part.
+Line 36 ~ 36:	241 ~ 241:	This is a statement.
+Line 36 ~ 36:	239 ~ 242:	This is a return sentence.
+Line 36 ~ 36:	239 ~ 243:	This is a sentence(return).
+Line 38 ~ 38:	249 ~ 249:	This is a factor.
+Line 38 ~ 38:	249 ~ 249:	This is a part.
+Line 38 ~ 38:	251 ~ 251:	This is an integer.
+Line 38 ~ 38:	251 ~ 251:	This is a factor.
+Line 38 ~ 38:	251 ~ 251:	This is a part.
+Line 38 ~ 38:	249 ~ 251:	This is a statement.
+Line 38 ~ 38:	247 ~ 252:	This is a factor.
+Line 38 ~ 38:	247 ~ 252:	This is a part.
+Line 38 ~ 38:	247 ~ 252:	This is a statement.
+Line 38 ~ 38:	245 ~ 253:	This is a return sentence.
+Line 38 ~ 38:	245 ~ 254:	This is a sentence(return).
+Line 35 ~ 38:	233 ~ 254:	This is a condition sentence(with else).
+Line 35 ~ 38:	233 ~ 254:	This is a sentence(if).
+Line 35 ~ 38:	233 ~ 254:	This is a sentence_list.
+Line 34 ~ 39:	232 ~ 255:	This is a sentence(sent_list).
+Line 40 ~ 40:	257 ~ 257:	This is a sentence(empty).
+Line 34 ~ 40:	223 ~ 257:	This is a condition sentence(with else).
+Line 34 ~ 40:	223 ~ 257:	This is a sentence(if).
+Line 34 ~ 40:	223 ~ 257:	This is a sentence_list.
+Line 33 ~ 41:	222 ~ 258:	This is a sentence(sent_list).
+Line 33 ~ 41:	204 ~ 258:	This is a if-circle sentence.
+Line 33 ~ 41:	204 ~ 258:	This is a sentence(circle).
+Line 33 ~ 41:	204 ~ 258:	This is a sentence_list.
+Line 32 ~ 41:	201 ~ 258:	This is composed sentences.
+Line 31 ~ 43:	194 ~ 259:	This is a ret-func declaration.
+Line 45 ~ 45:	word from 260 ~ 261	This is a head declaration.
+Line 45 ~ 45:	263 ~ 264:	This is an args_list.
+Line 46 ~ 46:	267 ~ 268:	This is a var's definition.
+Line 46 ~ 46:	word from 267 ~ 269	This is a var option.
+Line 47 ~ 47:	274 ~ 274:	This is an integer.
+Line 47 ~ 47:	274 ~ 274:	This is a factor.
+Line 47 ~ 47:	274 ~ 274:	This is a part.
+Line 47 ~ 47:	274 ~ 274:	This is a statement.
+Line 47 ~ 47:	276 ~ 276:	This is a factor.
+Line 47 ~ 47:	276 ~ 276:	This is a part.
+Line 47 ~ 47:	276 ~ 276:	This is a statement.
+Line 47 ~ 47:	278 ~ 278:	This is a factor.
+Line 47 ~ 47:	278 ~ 278:	This is a part.
+Line 47 ~ 47:	278 ~ 278:	This is a statement.
+Line 47 ~ 47:	276 ~ 278:	This is a condition.
+Line 48 ~ 48:	291 ~ 291:	This is a factor.
+Line 48 ~ 48:	291 ~ 291:	This is a part.
+Line 48 ~ 48:	291 ~ 291:	This is a statement.
+Line 48 ~ 48:	289 ~ 292:	This is a factor.
+Line 48 ~ 48:	289 ~ 292:	This is a part.
+Line 48 ~ 48:	289 ~ 292:	This is a statement.
+Line 48 ~ 48:	294 ~ 294:	This is a factor.
+Line 48 ~ 48:	294 ~ 294:	This is a part.
+Line 48 ~ 48:	294 ~ 294:	This is a statement.
+Line 48 ~ 48:	289 ~ 294:	This is a condition.
+Line 49 ~ 49:	299 ~ 299:	This is a factor.
+Line 49 ~ 49:	299 ~ 299:	This is a part.
+Line 49 ~ 49:	299 ~ 299:	This is a statement.
+Line 49 ~ 49:	301 ~ 301:	This is an integer.
+Line 49 ~ 49:	301 ~ 301:	This is a factor.
+Line 49 ~ 49:	301 ~ 301:	This is a part.
+Line 49 ~ 49:	301 ~ 301:	This is a statement.
+Line 49 ~ 49:	299 ~ 301:	This is a condition.
+Line 50 ~ 50:	305 ~ 305:	This is a factor.
+Line 50 ~ 50:	305 ~ 305:	This is a part.
+Line 50 ~ 50:	305 ~ 305:	This is a statement.
+Line 50 ~ 50:	303 ~ 306:	This is a return sentence.
+Line 50 ~ 50:	303 ~ 307:	This is a sentence(return).
+Line 52 ~ 52:	313 ~ 313:	This is a factor.
+Line 52 ~ 52:	313 ~ 313:	This is a part.
+Line 52 ~ 52:	315 ~ 315:	This is an integer.
+Line 52 ~ 52:	315 ~ 315:	This is a factor.
+Line 52 ~ 52:	315 ~ 315:	This is a part.
+Line 52 ~ 52:	313 ~ 315:	This is a statement.
+Line 52 ~ 52:	311 ~ 316:	This is a factor.
+Line 52 ~ 52:	311 ~ 316:	This is a part.
+Line 52 ~ 52:	311 ~ 316:	This is a statement.
+Line 52 ~ 52:	309 ~ 317:	This is a return sentence.
+Line 52 ~ 52:	309 ~ 318:	This is a sentence(return).
+Line 49 ~ 52:	297 ~ 318:	This is a condition sentence(with else).
+Line 49 ~ 52:	297 ~ 318:	This is a sentence(if).
+Line 49 ~ 52:	297 ~ 318:	This is a sentence_list.
+Line 48 ~ 53:	296 ~ 319:	This is a sentence(sent_list).
+Line 54 ~ 54:	321 ~ 321:	This is a sentence(empty).
+Line 48 ~ 54:	287 ~ 321:	This is a condition sentence(with else).
+Line 48 ~ 54:	287 ~ 321:	This is a sentence(if).
+Line 48 ~ 54:	287 ~ 321:	This is a sentence_list.
+Line 47 ~ 55:	286 ~ 322:	This is a sentence(sent_list).
+Line 47 ~ 55:	270 ~ 322:	This is a if-circle sentence.
+Line 47 ~ 55:	270 ~ 322:	This is a sentence(circle).
+Line 47 ~ 55:	270 ~ 322:	This is a sentence_list.
+Line 46 ~ 55:	267 ~ 322:	This is composed sentences.
+Line 45 ~ 56:	260 ~ 323:	This is a ret-func declaration.
+Line 57 ~ 57:	word from 324 ~ 325	This is a head declaration.
+Line 57 ~ 57:	327 ~ 328:	This is an args_list.
+Line 58 ~ 58:	333 ~ 333:	This is a factor.
+Line 58 ~ 58:	333 ~ 333:	This is a part.
+Line 58 ~ 58:	333 ~ 333:	This is a statement.
+Line 58 ~ 58:	335 ~ 335:	This is a factor.
+Line 58 ~ 58:	335 ~ 335:	This is a part.
+Line 58 ~ 58:	335 ~ 335:	This is a statement.
+Line 58 ~ 58:	333 ~ 335:	This is a condition.
+Line 59 ~ 59:	339 ~ 339:	This is an integer.
+Line 59 ~ 59:	339 ~ 339:	This is a factor.
+Line 59 ~ 59:	339 ~ 339:	This is a part.
+Line 59 ~ 59:	339 ~ 339:	This is a statement.
+Line 59 ~ 59:	337 ~ 340:	This is a return sentence.
+Line 59 ~ 59:	337 ~ 341:	This is a sentence(return).
+Line 58 ~ 59:	331 ~ 341:	This is a condition sentence(without else).
+Line 58 ~ 59:	331 ~ 341:	This is a sentence(if).
+Line 60 ~ 60:	344 ~ 344:	This is a factor.
+Line 60 ~ 60:	344 ~ 344:	This is a part.
+Line 60 ~ 60:	344 ~ 344:	This is a statement.
+Line 60 ~ 60:	346 ~ 346:	This is a factor.
+Line 60 ~ 60:	346 ~ 346:	This is a part.
+Line 60 ~ 60:	346 ~ 346:	This is a statement.
+Line 60 ~ 60:	344 ~ 346:	This is a condition.
+Line 61 ~ 61:	350 ~ 350:	This is an integer.
+Line 61 ~ 61:	350 ~ 350:	This is a factor.
+Line 61 ~ 61:	350 ~ 350:	This is a part.
+Line 61 ~ 61:	350 ~ 350:	This is a statement.
+Line 61 ~ 61:	348 ~ 351:	This is a return sentence.
+Line 61 ~ 61:	348 ~ 352:	This is a sentence(return).
+Line 60 ~ 61:	342 ~ 352:	This is a condition sentence(without else).
+Line 60 ~ 61:	342 ~ 352:	This is a sentence(if).
+Line 62 ~ 62:	355 ~ 355:	This is a factor.
+Line 62 ~ 62:	355 ~ 355:	This is a part.
+Line 62 ~ 62:	355 ~ 355:	This is a statement.
+Line 62 ~ 62:	357 ~ 357:	This is a factor.
+Line 62 ~ 62:	357 ~ 357:	This is a part.
+Line 62 ~ 62:	357 ~ 357:	This is a statement.
+Line 62 ~ 62:	355 ~ 357:	This is a condition.
+Line 63 ~ 63:	361 ~ 361:	This is an integer.
+Line 63 ~ 63:	361 ~ 361:	This is a factor.
+Line 63 ~ 63:	361 ~ 361:	This is a part.
+Line 63 ~ 63:	361 ~ 361:	This is a statement.
+Line 63 ~ 63:	359 ~ 362:	This is a return sentence.
+Line 63 ~ 63:	359 ~ 363:	This is a sentence(return).
+Line 62 ~ 63:	353 ~ 363:	This is a condition sentence(without else).
+Line 62 ~ 63:	353 ~ 363:	This is a sentence(if).
+Line 64 ~ 64:	366 ~ 366:	This is a factor.
+Line 64 ~ 64:	366 ~ 366:	This is a part.
+Line 64 ~ 64:	366 ~ 366:	This is a statement.
+Line 64 ~ 64:	368 ~ 368:	This is a factor.
+Line 64 ~ 64:	368 ~ 368:	This is a part.
+Line 64 ~ 64:	368 ~ 368:	This is a statement.
+Line 64 ~ 64:	366 ~ 368:	This is a condition.
+Line 65 ~ 65:	372 ~ 372:	This is an integer.
+Line 65 ~ 65:	372 ~ 372:	This is a factor.
+Line 65 ~ 65:	372 ~ 372:	This is a part.
+Line 65 ~ 65:	372 ~ 372:	This is a statement.
+Line 65 ~ 65:	370 ~ 373:	This is a return sentence.
+Line 65 ~ 65:	370 ~ 374:	This is a sentence(return).
+Line 64 ~ 65:	364 ~ 374:	This is a condition sentence(without else).
+Line 64 ~ 65:	364 ~ 374:	This is a sentence(if).
+Line 66 ~ 66:	377 ~ 377:	This is a factor.
+Line 66 ~ 66:	377 ~ 377:	This is a part.
+Line 66 ~ 66:	377 ~ 377:	This is a statement.
+Line 66 ~ 66:	379 ~ 379:	This is a factor.
+Line 66 ~ 66:	379 ~ 379:	This is a part.
+Line 66 ~ 66:	379 ~ 379:	This is a statement.
+Line 66 ~ 66:	377 ~ 379:	This is a condition.
+Line 67 ~ 67:	383 ~ 383:	This is an integer.
+Line 67 ~ 67:	383 ~ 383:	This is a factor.
+Line 67 ~ 67:	383 ~ 383:	This is a part.
+Line 67 ~ 67:	383 ~ 383:	This is a statement.
+Line 67 ~ 67:	381 ~ 384:	This is a return sentence.
+Line 67 ~ 67:	381 ~ 385:	This is a sentence(return).
+Line 66 ~ 67:	375 ~ 385:	This is a condition sentence(without else).
+Line 66 ~ 67:	375 ~ 385:	This is a sentence(if).
+Line 58 ~ 67:	331 ~ 385:	This is a sentence_list.
+Line 58 ~ 67:	331 ~ 385:	This is composed sentences.
+Line 57 ~ 68:	324 ~ 386:	This is a ret-func declaration.
+Line 69 ~ 69:	word from 387 ~ 388	This is a head declaration.
+Line 69 ~ 69:	390 ~ 391:	This is an args_list.
+Line 70 ~ 70:	396 ~ 396:	This is a factor.
+Line 70 ~ 70:	396 ~ 396:	This is a part.
+Line 70 ~ 70:	396 ~ 396:	This is a statement.
+Line 70 ~ 70:	398 ~ 398:	This is an integer.
+Line 70 ~ 70:	398 ~ 398:	This is a factor.
+Line 70 ~ 70:	398 ~ 398:	This is a part.
+Line 70 ~ 70:	398 ~ 398:	This is a statement.
+Line 70 ~ 70:	396 ~ 398:	This is a condition.
+Line 71 ~ 71:	402 ~ 402:	This is a factor.
+Line 71 ~ 71:	402 ~ 402:	This is a part.
+Line 71 ~ 71:	402 ~ 402:	This is a statement.
+Line 71 ~ 71:	400 ~ 403:	This is a return sentence.
+Line 71 ~ 71:	400 ~ 404:	This is a sentence(return).
+Line 70 ~ 71:	394 ~ 404:	This is a condition sentence(without else).
+Line 70 ~ 71:	394 ~ 404:	This is a sentence(if).
+Line 72 ~ 72:	407 ~ 407:	This is a factor.
+Line 72 ~ 72:	407 ~ 407:	This is a part.
+Line 72 ~ 72:	407 ~ 407:	This is a statement.
+Line 72 ~ 72:	409 ~ 409:	This is an integer.
+Line 72 ~ 72:	409 ~ 409:	This is a factor.
+Line 72 ~ 72:	409 ~ 409:	This is a part.
+Line 72 ~ 72:	409 ~ 409:	This is a statement.
+Line 72 ~ 72:	407 ~ 409:	This is a condition.
+Line 73 ~ 73:	413 ~ 413:	This is a factor.
+Line 73 ~ 73:	413 ~ 413:	This is a part.
+Line 73 ~ 73:	413 ~ 413:	This is a statement.
+Line 73 ~ 73:	411 ~ 414:	This is a return sentence.
+Line 73 ~ 73:	411 ~ 415:	This is a sentence(return).
+Line 72 ~ 73:	405 ~ 415:	This is a condition sentence(without else).
+Line 72 ~ 73:	405 ~ 415:	This is a sentence(if).
+Line 74 ~ 74:	418 ~ 418:	This is a factor.
+Line 74 ~ 74:	418 ~ 418:	This is a part.
+Line 74 ~ 74:	418 ~ 418:	This is a statement.
+Line 74 ~ 74:	420 ~ 420:	This is an integer.
+Line 74 ~ 74:	420 ~ 420:	This is a factor.
+Line 74 ~ 74:	420 ~ 420:	This is a part.
+Line 74 ~ 74:	420 ~ 420:	This is a statement.
+Line 74 ~ 74:	418 ~ 420:	This is a condition.
+Line 75 ~ 75:	424 ~ 424:	This is a factor.
+Line 75 ~ 75:	424 ~ 424:	This is a part.
+Line 75 ~ 75:	424 ~ 424:	This is a statement.
+Line 75 ~ 75:	422 ~ 425:	This is a return sentence.
+Line 75 ~ 75:	422 ~ 426:	This is a sentence(return).
+Line 74 ~ 75:	416 ~ 426:	This is a condition sentence(without else).
+Line 74 ~ 75:	416 ~ 426:	This is a sentence(if).
+Line 76 ~ 76:	429 ~ 429:	This is a factor.
+Line 76 ~ 76:	429 ~ 429:	This is a part.
+Line 76 ~ 76:	429 ~ 429:	This is a statement.
+Line 76 ~ 76:	431 ~ 431:	This is an integer.
+Line 76 ~ 76:	431 ~ 431:	This is a factor.
+Line 76 ~ 76:	431 ~ 431:	This is a part.
+Line 76 ~ 76:	431 ~ 431:	This is a statement.
+Line 76 ~ 76:	429 ~ 431:	This is a condition.
+Line 77 ~ 77:	435 ~ 435:	This is a factor.
+Line 77 ~ 77:	435 ~ 435:	This is a part.
+Line 77 ~ 77:	435 ~ 435:	This is a statement.
+Line 77 ~ 77:	433 ~ 436:	This is a return sentence.
+Line 77 ~ 77:	433 ~ 437:	This is a sentence(return).
+Line 76 ~ 77:	427 ~ 437:	This is a condition sentence(without else).
+Line 76 ~ 77:	427 ~ 437:	This is a sentence(if).
+Line 78 ~ 78:	440 ~ 440:	This is a factor.
+Line 78 ~ 78:	440 ~ 440:	This is a part.
+Line 78 ~ 78:	440 ~ 440:	This is a statement.
+Line 78 ~ 78:	442 ~ 442:	This is an integer.
+Line 78 ~ 78:	442 ~ 442:	This is a factor.
+Line 78 ~ 78:	442 ~ 442:	This is a part.
+Line 78 ~ 78:	442 ~ 442:	This is a statement.
+Line 78 ~ 78:	440 ~ 442:	This is a condition.
+Line 79 ~ 79:	446 ~ 446:	This is a factor.
+Line 79 ~ 79:	446 ~ 446:	This is a part.
+Line 79 ~ 79:	446 ~ 446:	This is a statement.
+Line 79 ~ 79:	444 ~ 447:	This is a return sentence.
+Line 79 ~ 79:	444 ~ 448:	This is a sentence(return).
+Line 78 ~ 79:	438 ~ 448:	This is a condition sentence(without else).
+Line 78 ~ 79:	438 ~ 448:	This is a sentence(if).
+Line 70 ~ 79:	394 ~ 448:	This is a sentence_list.
+Line 70 ~ 79:	394 ~ 448:	This is composed sentences.
+Line 69 ~ 80:	387 ~ 449:	This is a ret-func declaration.
+Line 82 ~ 82:	word from 450 ~ 451	This is a head declaration.
+Line 83 ~ 83:	457 ~ 457:	This is an integer.
+Line 83 ~ 83:	word from 454 ~ 457	This is an int definition.
+Line 83 ~ 83:	word from 453 ~ 458	This is const option.
+Line 84 ~ 84:	459 ~ 460:	This is a var's definition.
+Line 85 ~ 85:	462 ~ 463:	This is a var's definition.
+Line 84 ~ 85:	word from 459 ~ 464	This is a var option.
+Line 86 ~ 86:	469 ~ 469:	This is an integer.
+Line 86 ~ 86:	469 ~ 469:	This is a factor.
+Line 86 ~ 86:	469 ~ 469:	This is a part.
+Line 86 ~ 86:	469 ~ 469:	This is a statement.
+Line 86 ~ 86:	467 ~ 470:	This is a factor.
+Line 86 ~ 86:	467 ~ 470:	This is a part.
+Line 86 ~ 86:	467 ~ 470:	This is a statement.
+Line 86 ~ 86:	465 ~ 470:	This is an assign sentence.
+Line 86 ~ 86:	465 ~ 471:	This is a sentence(assign).
+Line 87 ~ 87:	476 ~ 476:	This is an integer.
+Line 87 ~ 87:	476 ~ 476:	This is a factor.
+Line 87 ~ 87:	476 ~ 476:	This is a part.
+Line 87 ~ 87:	476 ~ 476:	This is a statement.
+Line 87 ~ 87:	478 ~ 478:	This is a factor.
+Line 87 ~ 87:	478 ~ 478:	This is a part.
+Line 87 ~ 87:	478 ~ 478:	This is a statement.
+Line 87 ~ 87:	480 ~ 480:	This is a factor.
+Line 87 ~ 87:	480 ~ 480:	This is a part.
+Line 87 ~ 87:	480 ~ 480:	This is a statement.
+Line 87 ~ 87:	478 ~ 480:	This is a condition.
+Line 88 ~ 88:	493 ~ 493:	This is a factor.
+Line 88 ~ 88:	493 ~ 493:	This is a part.
+Line 88 ~ 88:	493 ~ 493:	This is a statement.
+Line 88 ~ 88:	493 ~ 493:	This is a value_args_list.
+Line 88 ~ 88:	491 ~ 494:	This is a factor.
+Line 88 ~ 88:	491 ~ 494:	This is a part.
+Line 88 ~ 88:	491 ~ 494:	This is a statement.
+Line 88 ~ 88:	500 ~ 500:	This is a factor.
+Line 88 ~ 88:	500 ~ 500:	This is a part.
+Line 88 ~ 88:	500 ~ 500:	This is a statement.
+Line 88 ~ 88:	498 ~ 501:	This is a factor.
+Line 88 ~ 88:	498 ~ 501:	This is a part.
+Line 88 ~ 88:	498 ~ 501:	This is a statement.
+Line 88 ~ 88:	498 ~ 501:	This is a value_args_list.
+Line 88 ~ 88:	496 ~ 502:	This is a factor.
+Line 88 ~ 88:	496 ~ 502:	This is a part.
+Line 88 ~ 88:	496 ~ 502:	This is a statement.
+Line 88 ~ 88:	491 ~ 502:	This is a condition.
+Line 89 ~ 89:	508 ~ 508:	This is a factor.
+Line 89 ~ 89:	508 ~ 508:	This is a part.
+Line 89 ~ 89:	508 ~ 508:	This is a statement.
+Line 89 ~ 89:	506 ~ 509:	This is a factor.
+Line 89 ~ 89:	506 ~ 509:	This is a part.
+Line 89 ~ 89:	506 ~ 509:	This is a statement.
+Line 89 ~ 89:	504 ~ 509:	This is an assign sentence.
+Line 89 ~ 89:	504 ~ 510:	This is a sentence(assign).
+Line 90 ~ 90:	512 ~ 512:	This is a sentence(empty).
+Line 88 ~ 90:	489 ~ 512:	This is a condition sentence(with else).
+Line 88 ~ 90:	489 ~ 512:	This is a sentence(if).
+Line 88 ~ 90:	489 ~ 512:	This is a sentence_list.
+Line 87 ~ 91:	488 ~ 513:	This is a sentence(sent_list).
+Line 87 ~ 91:	472 ~ 513:	This is a if-circle sentence.
+Line 87 ~ 91:	472 ~ 513:	This is a sentence(circle).
+Line 92 ~ 92:	516 ~ 516:	This is a factor.
+Line 92 ~ 92:	516 ~ 516:	This is a part.
+Line 92 ~ 92:	516 ~ 516:	This is a statement.
+Line 92 ~ 92:	514 ~ 517:	This is a return sentence.
+Line 92 ~ 92:	514 ~ 518:	This is a sentence(return).
+Line 86 ~ 92:	465 ~ 518:	This is a sentence_list.
+Line 83 ~ 92:	453 ~ 518:	This is composed sentences.
+Line 82 ~ 93:	450 ~ 519:	This is a ret-func declaration.
+Line 98 ~ 98:	word from 520 ~ 521	This is a head declaration.
+Line 98 ~ 98:	523 ~ 527:	This is an args_list.
+Line 99 ~ 99:	530 ~ 531:	This is a var's definition.
+Line 100 ~ 100:	533 ~ 534:	This is a var's definition.
+Line 99 ~ 100:	word from 530 ~ 535	This is a var option.
+Line 101 ~ 101:	540 ~ 540:	This is a factor.
+Line 101 ~ 101:	540 ~ 540:	This is a part.
+Line 101 ~ 101:	540 ~ 540:	This is a statement.
+Line 101 ~ 101:	538 ~ 541:	This is a factor.
+Line 101 ~ 101:	538 ~ 541:	This is a part.
+Line 101 ~ 101:	538 ~ 541:	This is a statement.
+Line 101 ~ 101:	536 ~ 541:	This is an assign sentence.
+Line 101 ~ 101:	536 ~ 542:	This is a sentence(assign).
+Line 102 ~ 102:	545 ~ 545:	This is a factor.
+Line 102 ~ 102:	545 ~ 545:	This is a part.
+Line 102 ~ 102:	545 ~ 545:	This is a statement.
+Line 102 ~ 102:	547 ~ 547:	This is an integer.
+Line 102 ~ 102:	547 ~ 547:	This is a factor.
+Line 102 ~ 102:	547 ~ 547:	This is a part.
+Line 102 ~ 102:	547 ~ 547:	This is a statement.
+Line 102 ~ 102:	545 ~ 547:	This is a condition.
+Line 103 ~ 103:	554 ~ 554:	This is a factor.
+Line 103 ~ 103:	554 ~ 554:	This is a part.
+Line 103 ~ 103:	554 ~ 554:	This is a statement.
+Line 103 ~ 103:	554 ~ 554:	This is a value_args_list.
+Line 103 ~ 103:	552 ~ 555:	This is a factor.
+Line 103 ~ 103:	552 ~ 555:	This is a part.
+Line 103 ~ 103:	552 ~ 555:	This is a statement.
+Line 103 ~ 103:	550 ~ 555:	This is an assign sentence.
+Line 103 ~ 103:	550 ~ 556:	This is a sentence(assign).
+Line 104 ~ 104:	557 ~ 560:	This is a printf sentence(only string).
+Line 104 ~ 104:	557 ~ 561:	This is a sentence(printf).
+Line 105 ~ 105:	564 ~ 564:	This is a factor.
+Line 105 ~ 105:	564 ~ 564:	This is a part.
+Line 105 ~ 105:	564 ~ 564:	This is a statement.
+Line 105 ~ 105:	562 ~ 565:	This is a return sentence.
+Line 105 ~ 105:	562 ~ 566:	This is a sentence(return).
+Line 103 ~ 105:	550 ~ 566:	This is a sentence_list.
+Line 102 ~ 106:	549 ~ 567:	This is a sentence(sent_list).
+Line 108 ~ 108:	573 ~ 573:	This is a factor.
+Line 108 ~ 108:	573 ~ 573:	This is a part.
+Line 108 ~ 108:	573 ~ 573:	This is a statement.
+Line 108 ~ 108:	573 ~ 573:	This is a value_args_list.
+Line 108 ~ 108:	571 ~ 574:	This is a factor.
+Line 108 ~ 108:	571 ~ 574:	This is a part.
+Line 108 ~ 108:	571 ~ 574:	This is a statement.
+Line 108 ~ 108:	569 ~ 575:	This is a return sentence.
+Line 108 ~ 108:	569 ~ 576:	This is a sentence(return).
+Line 102 ~ 108:	543 ~ 576:	This is a condition sentence(with else).
+Line 102 ~ 108:	543 ~ 576:	This is a sentence(if).
+Line 101 ~ 108:	536 ~ 576:	This is a sentence_list.
+Line 99 ~ 108:	530 ~ 576:	This is composed sentences.
+Line 98 ~ 109:	520 ~ 577:	This is a ret-func declaration.
+Line 112 ~ 112:	585 ~ 585:	This is a factor.
+Line 112 ~ 112:	585 ~ 585:	This is a part.
+Line 112 ~ 112:	587 ~ 587:	This is an integer.
+Line 112 ~ 112:	587 ~ 587:	This is a factor.
+Line 112 ~ 112:	587 ~ 587:	This is a part.
+Line 112 ~ 112:	585 ~ 587:	This is a statement.
+Line 112 ~ 112:	589 ~ 589:	This is a factor.
+Line 112 ~ 112:	589 ~ 589:	This is a part.
+Line 112 ~ 112:	589 ~ 589:	This is a statement.
+Line 112 ~ 112:	591 ~ 591:	This is an integer.
+Line 112 ~ 112:	591 ~ 591:	This is a factor.
+Line 112 ~ 112:	591 ~ 591:	This is a part.
+Line 112 ~ 112:	591 ~ 591:	This is a statement.
+Line 112 ~ 112:	589 ~ 591:	This is a condition.
+Line 113 ~ 113:	602 ~ 602:	This is a factor.
+Line 113 ~ 113:	602 ~ 602:	This is a part.
+Line 113 ~ 113:	602 ~ 602:	This is a statement.
+Line 113 ~ 113:	605 ~ 605:	This is a factor.
+Line 113 ~ 113:	605 ~ 605:	This is a part.
+Line 113 ~ 113:	605 ~ 605:	This is a statement.
+Line 113 ~ 113:	600 ~ 605:	This is an assign sentence.
+Line 113 ~ 113:	600 ~ 606:	This is a sentence(assign).
+Line 114 ~ 114:	609 ~ 609:	This is a factor.
+Line 114 ~ 114:	609 ~ 609:	This is a part.
+Line 114 ~ 114:	609 ~ 609:	This is a statement.
+Line 114 ~ 114:	612 ~ 612:	This is a factor.
+Line 114 ~ 114:	612 ~ 612:	This is a part.
+Line 114 ~ 114:	612 ~ 612:	This is a statement.
+Line 114 ~ 114:	607 ~ 612:	This is an assign sentence.
+Line 114 ~ 114:	607 ~ 613:	This is a sentence(assign).
+Line 113 ~ 114:	600 ~ 613:	This is a sentence_list.
+Line 112 ~ 115:	599 ~ 614:	This is a sentence(sent_list).
+Line 112 ~ 115:	581 ~ 614:	This is a if-circle sentence.
+Line 112 ~ 115:	581 ~ 614:	This is a sentence(circle).
+Line 112 ~ 115:	581 ~ 614:	This is a sentence_list.
+Line 112 ~ 115:	581 ~ 614:	This is composed sentences.
+Line 111 ~ 116:	578 ~ 615:	This is a void-func declaration.
+Line 118 ~ 118:	619 ~ 620:	This is an args_list.
+Line 119 ~ 119:	629 ~ 629:	This is a factor.
+Line 119 ~ 119:	629 ~ 629:	This is a part.
+Line 119 ~ 119:	629 ~ 629:	This is a statement.
+Line 119 ~ 119:	627 ~ 630:	This is a factor.
+Line 119 ~ 119:	627 ~ 630:	This is a part.
+Line 119 ~ 119:	627 ~ 630:	This is a statement.
+Line 119 ~ 119:	623 ~ 631:	This is a printf sentence(with statement).
+Line 119 ~ 119:	623 ~ 632:	This is a sentence(printf).
+Line 120 ~ 120:	633 ~ 636:	This is a printf sentence(only string).
+Line 120 ~ 120:	633 ~ 637:	This is a sentence(printf).
+Line 121 ~ 121:	644 ~ 644:	This is a factor.
+Line 121 ~ 121:	644 ~ 644:	This is a part.
+Line 121 ~ 121:	644 ~ 644:	This is a statement.
+Line 121 ~ 121:	642 ~ 645:	This is a factor.
+Line 121 ~ 121:	642 ~ 645:	This is a part.
+Line 121 ~ 121:	642 ~ 645:	This is a statement.
+Line 121 ~ 121:	638 ~ 646:	This is a printf sentence(with statement).
+Line 121 ~ 121:	638 ~ 647:	This is a sentence(printf).
+Line 122 ~ 122:	648 ~ 651:	This is a printf sentence(only string).
+Line 122 ~ 122:	648 ~ 652:	This is a sentence(printf).
+Line 123 ~ 123:	659 ~ 659:	This is a factor.
+Line 123 ~ 123:	659 ~ 659:	This is a part.
+Line 123 ~ 123:	659 ~ 659:	This is a statement.
+Line 123 ~ 123:	657 ~ 660:	This is a factor.
+Line 123 ~ 123:	657 ~ 660:	This is a part.
+Line 123 ~ 123:	657 ~ 660:	This is a statement.
+Line 123 ~ 123:	653 ~ 661:	This is a printf sentence(with statement).
+Line 123 ~ 123:	653 ~ 662:	This is a sentence(printf).
+Line 124 ~ 124:	663 ~ 666:	This is a printf sentence(only string).
+Line 124 ~ 124:	663 ~ 667:	This is a sentence(printf).
+Line 119 ~ 124:	623 ~ 667:	This is a sentence_list.
+Line 119 ~ 124:	623 ~ 667:	This is composed sentences.
+Line 118 ~ 125:	616 ~ 668:	This is a void-func declaration.
+Line 127 ~ 127:	word from 669 ~ 670	This is a head declaration.
+Line 128 ~ 128:	672 ~ 673:	This is a var's definition.
+Line 128 ~ 128:	word from 672 ~ 674	This is a var option.
+Line 129 ~ 129:	679 ~ 679:	This is an integer.
+Line 129 ~ 129:	679 ~ 679:	This is a factor.
+Line 129 ~ 129:	679 ~ 679:	This is a part.
+Line 129 ~ 129:	679 ~ 679:	This is a statement.
+Line 129 ~ 129:	683 ~ 683:	This is a factor.
+Line 129 ~ 129:	683 ~ 683:	This is a part.
+Line 129 ~ 129:	683 ~ 683:	This is a statement.
+Line 129 ~ 129:	681 ~ 684:	This is a factor.
+Line 129 ~ 129:	681 ~ 684:	This is a part.
+Line 129 ~ 129:	681 ~ 684:	This is a statement.
+Line 129 ~ 129:	686 ~ 686:	This is a factor.
+Line 129 ~ 129:	686 ~ 686:	This is a part.
+Line 129 ~ 129:	686 ~ 686:	This is a statement.
+Line 129 ~ 129:	681 ~ 686:	This is a condition.
+Line 129 ~ 129:	694 ~ 694:	This is a sentence(empty).
+Line 129 ~ 129:	675 ~ 694:	This is a if-circle sentence.
+Line 129 ~ 129:	675 ~ 694:	This is a sentence(circle).
+Line 130 ~ 130:	697 ~ 697:	This is a factor.
+Line 130 ~ 130:	697 ~ 697:	This is a part.
+Line 130 ~ 130:	697 ~ 697:	This is a statement.
+Line 130 ~ 130:	695 ~ 698:	This is a return sentence.
+Line 130 ~ 130:	695 ~ 699:	This is a sentence(return).
+Line 129 ~ 130:	675 ~ 699:	This is a sentence_list.
+Line 128 ~ 130:	672 ~ 699:	This is composed sentences.
+Line 127 ~ 131:	669 ~ 700:	This is a ret-func declaration.
+Line 134 ~ 134:	706 ~ 707:	This is a var's definition.
+Line 135 ~ 135:	709 ~ 710:	This is a var's definition.
+Line 136 ~ 136:	712 ~ 713:	This is a var's definition.
+Line 137 ~ 137:	715 ~ 716:	This is a var's definition.
+Line 138 ~ 138:	718 ~ 719:	This is a var's definition.
+Line 134 ~ 138:	word from 706 ~ 720	This is a var option.
+Line 139 ~ 139:	723 ~ 723:	This is an integer.
+Line 139 ~ 139:	723 ~ 723:	This is a factor.
+Line 139 ~ 139:	723 ~ 723:	This is a part.
+Line 139 ~ 139:	723 ~ 723:	This is a statement.
+Line 139 ~ 139:	721 ~ 723:	This is an assign sentence.
+Line 139 ~ 139:	721 ~ 724:	This is a sentence(assign).
+Line 140 ~ 140:	725 ~ 728:	This is a printf sentence(only string).
+Line 140 ~ 140:	725 ~ 729:	This is a sentence(printf).
+Line 141 ~ 141:	730 ~ 730:	This is a func_usage sentence(without args).
+Line 141 ~ 141:	730 ~ 731:	This is a sentence(no_args_func_usage).
+Line 142 ~ 142:	732 ~ 735:	This is a printf sentence(only string).
+Line 142 ~ 142:	732 ~ 736:	This is a sentence(printf).
+Line 143 ~ 143:	739 ~ 739:	This is a factor.
+Line 143 ~ 143:	739 ~ 739:	This is a part.
+Line 143 ~ 143:	739 ~ 739:	This is a statement.
+Line 143 ~ 143:	741 ~ 741:	This is an integer.
+Line 143 ~ 143:	741 ~ 741:	This is a factor.
+Line 143 ~ 143:	741 ~ 741:	This is a part.
+Line 143 ~ 143:	741 ~ 741:	This is a statement.
+Line 143 ~ 143:	739 ~ 741:	This is a condition.
+Line 144 ~ 144:	744 ~ 751:	This is a scanf sentence.
+Line 144 ~ 144:	744 ~ 752:	This is a sentence(scanf).
+Line 145 ~ 145:	755 ~ 755:	This is a factor.
+Line 145 ~ 145:	755 ~ 755:	This is a part.
+Line 145 ~ 145:	755 ~ 755:	This is a statement.
+Line 145 ~ 145:	758 ~ 758:	This is a factor.
+Line 145 ~ 145:	758 ~ 758:	This is a part.
+Line 145 ~ 145:	758 ~ 758:	This is a statement.
+Line 145 ~ 145:	753 ~ 758:	This is an assign sentence.
+Line 145 ~ 145:	753 ~ 759:	This is a sentence(assign).
+Line 146 ~ 146:	762 ~ 762:	This is a factor.
+Line 146 ~ 146:	762 ~ 762:	This is a part.
+Line 146 ~ 146:	762 ~ 762:	This is a statement.
+Line 146 ~ 146:	765 ~ 765:	This is a factor.
+Line 146 ~ 146:	765 ~ 765:	This is a part.
+Line 146 ~ 146:	765 ~ 765:	This is a statement.
+Line 146 ~ 146:	760 ~ 765:	This is an assign sentence.
+Line 146 ~ 146:	760 ~ 766:	This is a sentence(assign).
+Line 147 ~ 147:	769 ~ 769:	This is a factor.
+Line 147 ~ 147:	769 ~ 769:	This is a part.
+Line 147 ~ 147:	769 ~ 769:	This is a statement.
+Line 147 ~ 147:	772 ~ 772:	This is a factor.
+Line 147 ~ 147:	772 ~ 772:	This is a part.
+Line 147 ~ 147:	772 ~ 772:	This is a statement.
+Line 147 ~ 147:	767 ~ 772:	This is an assign sentence.
+Line 147 ~ 147:	767 ~ 773:	This is a sentence(assign).
+Line 148 ~ 148:	776 ~ 776:	This is a factor.
+Line 148 ~ 148:	776 ~ 776:	This is a part.
+Line 148 ~ 148:	776 ~ 776:	This is a statement.
+Line 148 ~ 148:	774 ~ 777:	This is a printf sentence(with statement).
+Line 148 ~ 148:	774 ~ 778:	This is a sentence(printf).
+Line 149 ~ 149:	779 ~ 782:	This is a printf sentence(only string).
+Line 149 ~ 149:	779 ~ 783:	This is a sentence(printf).
+Line 150 ~ 150:	786 ~ 786:	This is a factor.
+Line 150 ~ 150:	786 ~ 786:	This is a part.
+Line 150 ~ 150:	786 ~ 786:	This is a statement.
+Line 150 ~ 150:	786 ~ 786:	This is a value_args_list.
+Line 150 ~ 150:	784 ~ 787:	This is a func_usage sentence(with args).
+Line 150 ~ 150:	784 ~ 788:	This is a sentence(with_args_func_usage).
+Line 151 ~ 151:	791 ~ 791:	This is a factor.
+Line 151 ~ 151:	791 ~ 791:	This is a part.
+Line 151 ~ 151:	793 ~ 793:	This is an integer.
+Line 151 ~ 151:	793 ~ 793:	This is a factor.
+Line 151 ~ 151:	793 ~ 793:	This is a part.
+Line 151 ~ 151:	791 ~ 793:	This is a statement.
+Line 151 ~ 151:	789 ~ 793:	This is an assign sentence.
+Line 151 ~ 151:	789 ~ 794:	This is a sentence(assign).
+Line 144 ~ 151:	744 ~ 794:	This is a sentence_list.
+Line 143 ~ 152:	743 ~ 795:	This is a sentence(sent_list).
+Line 143 ~ 152:	737 ~ 795:	This is a while-circle.
+Line 143 ~ 152:	737 ~ 795:	This is a sentence(circle).
+Line 154 ~ 154:	798 ~ 798:	This is a factor.
+Line 154 ~ 154:	798 ~ 798:	This is a part.
+Line 154 ~ 154:	798 ~ 798:	This is a statement.
+Line 154 ~ 154:	800 ~ 800:	This is an integer.
+Line 154 ~ 154:	800 ~ 800:	This is a factor.
+Line 154 ~ 154:	800 ~ 800:	This is a part.
+Line 154 ~ 154:	800 ~ 800:	This is a statement.
+Line 154 ~ 154:	798 ~ 800:	This is a condition.
+Line 155 ~ 155:	802 ~ 805:	This is a printf sentence(only string).
+Line 155 ~ 155:	802 ~ 806:	This is a sentence(printf).
+Line 154 ~ 155:	796 ~ 806:	This is a condition sentence(without else).
+Line 154 ~ 155:	796 ~ 806:	This is a sentence(if).
+Line 157 ~ 157:	807 ~ 810:	This is a printf sentence(only string).
+Line 157 ~ 157:	807 ~ 811:	This is a sentence(printf).
+Line 158 ~ 158:	814 ~ 814:	This is a factor.
+Line 158 ~ 158:	814 ~ 814:	This is a part.
+Line 158 ~ 158:	814 ~ 814:	This is a statement.
+Line 158 ~ 158:	812 ~ 815:	This is a printf sentence(with statement).
+Line 158 ~ 158:	812 ~ 816:	This is a sentence(printf).
+Line 160 ~ 160:	817 ~ 820:	This is a printf sentence(only string).
+Line 160 ~ 160:	817 ~ 821:	This is a sentence(printf).
+Line 161 ~ 161:	824 ~ 824:	This is an integer.
+Line 161 ~ 161:	824 ~ 824:	This is a factor.
+Line 161 ~ 161:	824 ~ 824:	This is a part.
+Line 161 ~ 161:	824 ~ 824:	This is a statement.
+Line 161 ~ 161:	826 ~ 826:	This is an integer.
+Line 161 ~ 161:	826 ~ 826:	This is a factor.
+Line 161 ~ 161:	826 ~ 826:	This is a part.
+Line 161 ~ 161:	826 ~ 826:	This is a statement.
+Line 161 ~ 161:	824 ~ 826:	This is a value_args_list.
+Line 161 ~ 161:	822 ~ 827:	This is a func_usage sentence(with args).
+Line 161 ~ 161:	822 ~ 828:	This is a sentence(with_args_func_usage).
+Line 162 ~ 162:	833 ~ 833:	This is an integer.
+Line 162 ~ 162:	833 ~ 833:	This is a factor.
+Line 162 ~ 162:	833 ~ 833:	This is a part.
+Line 162 ~ 162:	833 ~ 833:	This is a statement.
+Line 162 ~ 162:	831 ~ 834:	This is a factor.
+Line 162 ~ 162:	831 ~ 834:	This is a part.
+Line 162 ~ 162:	831 ~ 834:	This is a statement.
+Line 162 ~ 162:	829 ~ 835:	This is a printf sentence(with statement).
+Line 162 ~ 162:	829 ~ 836:	This is a sentence(printf).
+Line 164 ~ 164:	839 ~ 839:	This is an integer.
+Line 164 ~ 164:	839 ~ 839:	This is a factor.
+Line 164 ~ 164:	839 ~ 839:	This is a part.
+Line 164 ~ 164:	839 ~ 839:	This is a statement.
+Line 164 ~ 164:	841 ~ 841:	This is an integer.
+Line 164 ~ 164:	841 ~ 841:	This is a factor.
+Line 164 ~ 164:	841 ~ 841:	This is a part.
+Line 164 ~ 164:	841 ~ 841:	This is a statement.
+Line 164 ~ 164:	839 ~ 841:	This is a value_args_list.
+Line 164 ~ 164:	837 ~ 842:	This is a func_usage sentence(with args).
+Line 164 ~ 164:	837 ~ 843:	This is a sentence(with_args_func_usage).
+Line 165 ~ 165:	848 ~ 848:	This is an integer.
+Line 165 ~ 165:	848 ~ 848:	This is a factor.
+Line 165 ~ 165:	848 ~ 848:	This is a part.
+Line 165 ~ 165:	848 ~ 848:	This is a statement.
+Line 165 ~ 165:	846 ~ 849:	This is a factor.
+Line 165 ~ 165:	846 ~ 849:	This is a part.
+Line 165 ~ 165:	846 ~ 849:	This is a statement.
+Line 165 ~ 165:	844 ~ 850:	This is a printf sentence(with statement).
+Line 165 ~ 165:	844 ~ 851:	This is a sentence(printf).
+Line 167 ~ 167:	854 ~ 854:	This is an integer.
+Line 167 ~ 167:	854 ~ 854:	This is a factor.
+Line 167 ~ 167:	854 ~ 854:	This is a part.
+Line 167 ~ 167:	854 ~ 854:	This is a statement.
+Line 167 ~ 167:	856 ~ 856:	This is an integer.
+Line 167 ~ 167:	856 ~ 856:	This is a factor.
+Line 167 ~ 167:	856 ~ 856:	This is a part.
+Line 167 ~ 167:	856 ~ 856:	This is a statement.
+Line 167 ~ 167:	854 ~ 856:	This is a value_args_list.
+Line 167 ~ 167:	852 ~ 857:	This is a func_usage sentence(with args).
+Line 167 ~ 167:	852 ~ 858:	This is a sentence(with_args_func_usage).
+Line 168 ~ 168:	863 ~ 863:	This is an integer.
+Line 168 ~ 168:	863 ~ 863:	This is a factor.
+Line 168 ~ 168:	863 ~ 863:	This is a part.
+Line 168 ~ 168:	863 ~ 863:	This is a statement.
+Line 168 ~ 168:	861 ~ 864:	This is a factor.
+Line 168 ~ 168:	861 ~ 864:	This is a part.
+Line 168 ~ 168:	861 ~ 864:	This is a statement.
+Line 168 ~ 168:	859 ~ 865:	This is a printf sentence(with statement).
+Line 168 ~ 168:	859 ~ 866:	This is a sentence(printf).
+Line 170 ~ 170:	869 ~ 869:	This is an integer.
+Line 170 ~ 170:	869 ~ 869:	This is a factor.
+Line 170 ~ 170:	869 ~ 869:	This is a part.
+Line 170 ~ 170:	869 ~ 869:	This is a statement.
+Line 170 ~ 170:	871 ~ 871:	This is an integer.
+Line 170 ~ 170:	871 ~ 871:	This is a factor.
+Line 170 ~ 170:	871 ~ 871:	This is a part.
+Line 170 ~ 170:	871 ~ 871:	This is a statement.
+Line 170 ~ 170:	869 ~ 871:	This is a value_args_list.
+Line 170 ~ 170:	867 ~ 872:	This is a func_usage sentence(with args).
+Line 170 ~ 170:	867 ~ 873:	This is a sentence(with_args_func_usage).
+Line 171 ~ 171:	878 ~ 878:	This is an integer.
+Line 171 ~ 171:	878 ~ 878:	This is a factor.
+Line 171 ~ 171:	878 ~ 878:	This is a part.
+Line 171 ~ 171:	878 ~ 878:	This is a statement.
+Line 171 ~ 171:	876 ~ 879:	This is a factor.
+Line 171 ~ 171:	876 ~ 879:	This is a part.
+Line 171 ~ 171:	876 ~ 879:	This is a statement.
+Line 171 ~ 171:	874 ~ 880:	This is a printf sentence(with statement).
+Line 171 ~ 171:	874 ~ 881:	This is a sentence(printf).
+Line 173 ~ 173:	884 ~ 884:	This is an integer.
+Line 173 ~ 173:	884 ~ 884:	This is a factor.
+Line 173 ~ 173:	884 ~ 884:	This is a part.
+Line 173 ~ 173:	884 ~ 884:	This is a statement.
+Line 173 ~ 173:	886 ~ 886:	This is an integer.
+Line 173 ~ 173:	886 ~ 886:	This is a factor.
+Line 173 ~ 173:	886 ~ 886:	This is a part.
+Line 173 ~ 173:	886 ~ 886:	This is a statement.
+Line 173 ~ 173:	884 ~ 886:	This is a value_args_list.
+Line 173 ~ 173:	882 ~ 887:	This is a func_usage sentence(with args).
+Line 173 ~ 173:	882 ~ 888:	This is a sentence(with_args_func_usage).
+Line 174 ~ 174:	893 ~ 893:	This is an integer.
+Line 174 ~ 174:	893 ~ 893:	This is a factor.
+Line 174 ~ 174:	893 ~ 893:	This is a part.
+Line 174 ~ 174:	893 ~ 893:	This is a statement.
+Line 174 ~ 174:	891 ~ 894:	This is a factor.
+Line 174 ~ 174:	891 ~ 894:	This is a part.
+Line 174 ~ 174:	891 ~ 894:	This is a statement.
+Line 174 ~ 174:	889 ~ 895:	This is a printf sentence(with statement).
+Line 174 ~ 174:	889 ~ 896:	This is a sentence(printf).
+Line 176 ~ 176:	899 ~ 899:	This is an integer.
+Line 176 ~ 176:	899 ~ 899:	This is a factor.
+Line 176 ~ 176:	899 ~ 899:	This is a part.
+Line 176 ~ 176:	899 ~ 899:	This is a statement.
+Line 176 ~ 176:	901 ~ 901:	This is an integer.
+Line 176 ~ 176:	901 ~ 901:	This is a factor.
+Line 176 ~ 176:	901 ~ 901:	This is a part.
+Line 176 ~ 176:	901 ~ 901:	This is a statement.
+Line 176 ~ 176:	899 ~ 901:	This is a value_args_list.
+Line 176 ~ 176:	897 ~ 902:	This is a func_usage sentence(with args).
+Line 176 ~ 176:	897 ~ 903:	This is a sentence(with_args_func_usage).
+Line 177 ~ 177:	908 ~ 908:	This is an integer.
+Line 177 ~ 177:	908 ~ 908:	This is a factor.
+Line 177 ~ 177:	908 ~ 908:	This is a part.
+Line 177 ~ 177:	908 ~ 908:	This is a statement.
+Line 177 ~ 177:	906 ~ 909:	This is a factor.
+Line 177 ~ 177:	906 ~ 909:	This is a part.
+Line 177 ~ 177:	906 ~ 909:	This is a statement.
+Line 177 ~ 177:	904 ~ 910:	This is a printf sentence(with statement).
+Line 177 ~ 177:	904 ~ 911:	This is a sentence(printf).
+Line 179 ~ 179:	914 ~ 914:	This is an integer.
+Line 179 ~ 179:	914 ~ 914:	This is a factor.
+Line 179 ~ 179:	914 ~ 914:	This is a part.
+Line 179 ~ 179:	914 ~ 914:	This is a statement.
+Line 179 ~ 179:	916 ~ 916:	This is an integer.
+Line 179 ~ 179:	916 ~ 916:	This is a factor.
+Line 179 ~ 179:	916 ~ 916:	This is a part.
+Line 179 ~ 179:	916 ~ 916:	This is a statement.
+Line 179 ~ 179:	914 ~ 916:	This is a value_args_list.
+Line 179 ~ 179:	912 ~ 917:	This is a func_usage sentence(with args).
+Line 179 ~ 179:	912 ~ 918:	This is a sentence(with_args_func_usage).
+Line 180 ~ 180:	923 ~ 923:	This is an integer.
+Line 180 ~ 180:	923 ~ 923:	This is a factor.
+Line 180 ~ 180:	923 ~ 923:	This is a part.
+Line 180 ~ 180:	923 ~ 923:	This is a statement.
+Line 180 ~ 180:	921 ~ 924:	This is a factor.
+Line 180 ~ 180:	921 ~ 924:	This is a part.
+Line 180 ~ 180:	921 ~ 924:	This is a statement.
+Line 180 ~ 180:	919 ~ 925:	This is a printf sentence(with statement).
+Line 180 ~ 180:	919 ~ 926:	This is a sentence(printf).
+Line 182 ~ 182:	929 ~ 929:	This is an integer.
+Line 182 ~ 182:	929 ~ 929:	This is a factor.
+Line 182 ~ 182:	929 ~ 929:	This is a part.
+Line 182 ~ 182:	929 ~ 929:	This is a statement.
+Line 182 ~ 182:	931 ~ 931:	This is an integer.
+Line 182 ~ 182:	931 ~ 931:	This is a factor.
+Line 182 ~ 182:	931 ~ 931:	This is a part.
+Line 182 ~ 182:	931 ~ 931:	This is a statement.
+Line 182 ~ 182:	929 ~ 931:	This is a value_args_list.
+Line 182 ~ 182:	927 ~ 932:	This is a func_usage sentence(with args).
+Line 182 ~ 182:	927 ~ 933:	This is a sentence(with_args_func_usage).
+Line 183 ~ 183:	938 ~ 938:	This is an integer.
+Line 183 ~ 183:	938 ~ 938:	This is a factor.
+Line 183 ~ 183:	938 ~ 938:	This is a part.
+Line 183 ~ 183:	938 ~ 938:	This is a statement.
+Line 183 ~ 183:	936 ~ 939:	This is a factor.
+Line 183 ~ 183:	936 ~ 939:	This is a part.
+Line 183 ~ 183:	936 ~ 939:	This is a statement.
+Line 183 ~ 183:	934 ~ 940:	This is a printf sentence(with statement).
+Line 183 ~ 183:	934 ~ 941:	This is a sentence(printf).
+Line 186 ~ 186:	942 ~ 945:	This is a printf sentence(only string).
+Line 186 ~ 186:	942 ~ 946:	This is a sentence(printf).
+Line 187 ~ 187:	949 ~ 949:	This is an integer.
+Line 187 ~ 187:	949 ~ 949:	This is a factor.
+Line 187 ~ 187:	949 ~ 949:	This is a part.
+Line 187 ~ 187:	949 ~ 949:	This is a statement.
+Line 187 ~ 187:	947 ~ 949:	This is an assign sentence.
+Line 187 ~ 187:	947 ~ 950:	This is a sentence(assign).
+Line 188 ~ 188:	953 ~ 953:	This is a factor.
+Line 188 ~ 188:	953 ~ 953:	This is a part.
+Line 188 ~ 188:	953 ~ 953:	This is a statement.
+Line 188 ~ 188:	955 ~ 955:	This is an integer.
+Line 188 ~ 188:	955 ~ 955:	This is a factor.
+Line 188 ~ 188:	955 ~ 955:	This is a part.
+Line 188 ~ 188:	955 ~ 955:	This is a statement.
+Line 188 ~ 188:	953 ~ 955:	This is a condition.
+Line 189 ~ 189:	960 ~ 960:	This is a factor.
+Line 189 ~ 189:	960 ~ 960:	This is a part.
+Line 189 ~ 189:	960 ~ 960:	This is a statement.
+Line 189 ~ 189:	960 ~ 960:	This is a value_args_list.
+Line 189 ~ 189:	958 ~ 961:	This is a func_usage sentence(with args).
+Line 189 ~ 189:	958 ~ 962:	This is a sentence(with_args_func_usage).
+Line 190 ~ 190:	965 ~ 965:	This is a factor.
+Line 190 ~ 190:	965 ~ 965:	This is a part.
+Line 190 ~ 190:	967 ~ 967:	This is an integer.
+Line 190 ~ 190:	967 ~ 967:	This is a factor.
+Line 190 ~ 190:	967 ~ 967:	This is a part.
+Line 190 ~ 190:	965 ~ 967:	This is a statement.
+Line 190 ~ 190:	963 ~ 967:	This is an assign sentence.
+Line 190 ~ 190:	963 ~ 968:	This is a sentence(assign).
+Line 189 ~ 190:	958 ~ 968:	This is a sentence_list.
+Line 188 ~ 191:	957 ~ 969:	This is a sentence(sent_list).
+Line 188 ~ 191:	951 ~ 969:	This is a while-circle.
+Line 188 ~ 191:	951 ~ 969:	This is a sentence(circle).
+Line 193 ~ 193:	970 ~ 973:	This is a printf sentence(only string).
+Line 193 ~ 193:	970 ~ 974:	This is a sentence(printf).
+Line 194 ~ 194:	975 ~ 975:	This is a func_usage sentence(without args).
+Line 194 ~ 194:	975 ~ 976:	This is a sentence(no_args_func_usage).
+Line 196 ~ 196:	979 ~ 979:	This is an integer.
+Line 196 ~ 196:	979 ~ 979:	This is a factor.
+Line 196 ~ 196:	979 ~ 979:	This is a part.
+Line 196 ~ 196:	979 ~ 979:	This is a statement.
+Line 196 ~ 196:	977 ~ 979:	This is an assign sentence.
+Line 196 ~ 196:	977 ~ 980:	This is a sentence(assign).
+Line 197 ~ 197:	983 ~ 983:	This is a factor.
+Line 197 ~ 197:	983 ~ 983:	This is a part.
+Line 197 ~ 197:	983 ~ 983:	This is a statement.
+Line 197 ~ 197:	985 ~ 985:	This is an integer.
+Line 197 ~ 197:	985 ~ 985:	This is a factor.
+Line 197 ~ 197:	985 ~ 985:	This is a part.
+Line 197 ~ 197:	985 ~ 985:	This is a statement.
+Line 197 ~ 197:	983 ~ 985:	This is a condition.
+Line 198 ~ 198:	990 ~ 990:	This is a factor.
+Line 198 ~ 198:	990 ~ 990:	This is a part.
+Line 198 ~ 198:	990 ~ 990:	This is a statement.
+Line 198 ~ 198:	990 ~ 990:	This is a value_args_list.
+Line 198 ~ 198:	988 ~ 991:	This is a func_usage sentence(with args).
+Line 198 ~ 198:	988 ~ 992:	This is a sentence(with_args_func_usage).
+Line 199 ~ 199:	995 ~ 995:	This is a factor.
+Line 199 ~ 199:	995 ~ 995:	This is a part.
+Line 199 ~ 199:	997 ~ 997:	This is an integer.
+Line 199 ~ 199:	997 ~ 997:	This is a factor.
+Line 199 ~ 199:	997 ~ 997:	This is a part.
+Line 199 ~ 199:	995 ~ 997:	This is a statement.
+Line 199 ~ 199:	993 ~ 997:	This is an assign sentence.
+Line 199 ~ 199:	993 ~ 998:	This is a sentence(assign).
+Line 198 ~ 199:	988 ~ 998:	This is a sentence_list.
+Line 197 ~ 200:	987 ~ 999:	This is a sentence(sent_list).
+Line 197 ~ 200:	981 ~ 999:	This is a while-circle.
+Line 197 ~ 200:	981 ~ 999:	This is a sentence(circle).
+Line 139 ~ 200:	721 ~ 999:	This is a sentence_list.
+Line 134 ~ 200:	706 ~ 999:	This is composed sentences.
+Line 133 ~ 201:	701 ~ 1000:	This is the main function.
+The file has been read to the end.
+Line 4 ~ 201:	word from 1 ~ 999	This is a program.

@@ -1,0 +1,8 @@
+﻿  grammar.c
+c:\users\administrator\desktop\project1\project1\grammar.c(313): warning C4101: “judge”: 未引用的局部变量
+c:\users\administrator\desktop\project1\project1\grammar.c(760): warning C4101: “judge”: 未引用的局部变量
+c:\users\administrator\desktop\project1\project1\grammar.c(1170): warning C4553: “==”: 未使用表达式结果；是否打算使用“=”?
+  main.c
+  正在生成代码...
+c:\users\administrator\desktop\project1\project1\grammar.c(308): warning C4715: “is_const_define”: 不是所有的控件路径都返回值
+  Project1.vcxproj -> C:\Users\Administrator\Desktop\Project1\x64\Debug\Project1.exe
