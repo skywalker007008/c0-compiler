@@ -276,7 +276,7 @@ int is_const_define(int pl, FUNC* func){			//If it is const's definition sentenc
 	//常量分为两类，int型与char型。两类的判断模式完全不同
 	int judge;
 	int i, num;
-	string name;
+	char* name;
 	CONST** temp_const;
 	CONST* store_const;
 	int start_line, end_line;
@@ -312,7 +312,7 @@ int is_const_define(int pl, FUNC* func){			//If it is const's definition sentenc
 			if (i == FIND) {
 				error(args_redefined);
 			}
-			LIST_INSERT_CONSTS(func->cons, store_const->hash, func->cons_num, i);
+			LIST_INSERT_CONSTS(func->cons, *store_const, &(func->cons_num));
 			INSERT_4_STATE(func, assign_const, int2str(num), NULL, name, NULL);	//	插一条常量赋值进去
 			//插入结束
 			//reserved.h中有封装版本
@@ -351,7 +351,7 @@ int is_const_define(int pl, FUNC* func){			//If it is const's definition sentenc
 			if (i == FIND) {
 				error(args_redefined);
 			}
-			LIST_INSERT_CONSTS(func->cons, store_const, func->cons_num, i);
+			LIST_INSERT_CONSTS(func->cons, *store_const, &(func->cons_num));
 			//插入结束
 			//reserved.h中有封装版本
 			INSERT_4_STATE(func, assign_const, int2str((int)num), 0, name, NULL);	//	插一条常量赋值进去
@@ -437,6 +437,7 @@ int is_var_define(int pl, FUNC* func){			//If it is var's definition
 	//int judge;
 	int start_line,end_line;
 	int type;
+	int i;
 	char* name;
 	VAR** temp_var;
 	VAR* store_var;
@@ -477,7 +478,7 @@ int is_var_define(int pl, FUNC* func){			//If it is var's definition
 		if (i == FIND) {
 			error(args_redefined);
 		}
-		LIST_INSERT_VARS(func->vars, store_var->hash, func->vars_num, i);
+		LIST_INSERT_VARS(func->vars, *store_var, &(func->vars_num));
 		//插入结束
 		//reserved.h中有封装版本
 		//最好是对变量都有个赋初始值的过程
@@ -499,7 +500,7 @@ int is_ret_func(int pl){
 	int judge;
 	int start_line, end_line;
 	int type;
-	string name;
+	char* name;
 	FUNC* func;
 	start_line = now_symbol->line;
 	sym = now_symbol->symbol_type;
@@ -531,7 +532,7 @@ int is_ret_func(int pl){
 	if (LIST_SEARCH_FUNCS(func) == FIND) {
 		error(func_redefined);
 	}
-	else if (strcmp(name, "main") == 1) {
+	else if (strcmp(name, "main") == 0) {
 		error(main_redefined);
 	}
 	LIST_INSERT_FUNCS(func);
@@ -555,8 +556,8 @@ int is_ret_func(int pl){
 int is_void_func(int pl){	//基本和有返回值函数定义差不多。
 	int judge;
 	int start_line, end_line;
-	string name;
-	FUNC **func
+	char* name;
+	FUNC **func;
 	start_line = now_symbol->line;
 	sym = now_symbol->symbol_type;
 

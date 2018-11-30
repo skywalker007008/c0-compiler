@@ -6,7 +6,21 @@
 
 /*static address stores each temp_regs name*/
 static char temp_regs[10][3] = { "t0","t1","t2","t3","t4","t5","t6","t7","t8","t9" };
-
+/*static char opstr[32][15] = {	"add",	"sub", 	"mult", "div", 	"eq", 	\
+							"neq",	"bgt",	"beq", 	"lst", 	"leq", 	\
+							"assign",		"assign_const", \
+							"assign_var", 	"get_addr",		\
+							"write_addr", 	"var_declare",	\
+							"save_temp", 	"reload_temp", 	\
+							"write_stack", 	"read_stack", 	"jump", \
+							"jump_ifnz", 	"jump_ifz",		\
+							"jump_link", 	"jump_backto",	\
+							"read_char", 	"read_int",		\
+							"write_char",	"write_int",	\
+							"write_string",	"set_label",	\
+							"set_func"
+						}
+*/
 //INSERT 4_state into func list
 
 
@@ -69,6 +83,83 @@ char* string_add2(char* a, char* b) {
 	strcat(c, "_");
 	strcat(c, b);
 	return c;
+}
+
+void gen_fCODE4(FILE* fp, FUNC* func) {
+	CODE4* temp_code4 = func->first_code4;
+	fprintf(fp, "%s:\n", func->name);
+	while (temp_code4 != NULL) {
+		gen_CODE4(fp, temp_code4);
+		temp_code4 = temp_code4->next_code4;
+	}
+	fprintf(fp, "#%s end\n", func->name);
+}
+
+void gen_CODE4(FILE* fp, CODE4* code) {
+	STATE4_OP op = code->op;
+	switch(op){
+		case add:{
+			fprintf(fp, "%s\t=%s\t+%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case sub:{
+			fprintf(fp, "%s\t=%s\t-%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case mult:{
+			fprintf(fp, "%s\t=%s\t*%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case div:{
+			fprintf(fp, "%s\t=%s\t/%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case eq:{
+			fprintf(fp, "%s\t=%s\t==?%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case neq:{
+			fprintf(fp, "%s\t=%s\t!=?%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case bgt:{
+			fprintf(fp, "%s\t=%s\t>?%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case beq:{
+			fprintf(fp, "%s\t=%s\t>=?%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case lst:{
+			fprintf(fp, "%s\t=%s\t<?%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case leq:{
+			fprintf(fp, "%s\t=%s\t<=?%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case assign:{
+			fprintf(fp, "%s\t=%s\n",code->rd, code->rs);
+			break;
+		}
+		case assign_const:{
+			fprintf(fp, "%s\t=%s\n",code->rd, code->rs);
+			break;
+		}
+		case assign_var:{
+			fprintf(fp, "%s\t=%s\n",code->rd, code->rs);
+			break;
+		}
+		case get_addr:{
+			fprintf(fp, "%s\t=&%s\t+%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		case write_addr:{
+			fprintf(fp, "%s\t*=%s\t+%s\n",code->rd, code->rs, code->rt);
+			break;
+		}
+		//stack和它应该是类似的
+	}
 }
 
 

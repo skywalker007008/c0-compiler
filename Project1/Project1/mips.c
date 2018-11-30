@@ -4,7 +4,7 @@
 //用于生成mips代码
 
 //相应函数实现对应的指令&寄存器转换为字符串
-string instr2str(MIPS_INSTR instr) {
+char* instr2str(MIPS_INSTR instr) {
 	switch(instr) {
 	case add:	return "add";
 	case sub:	return "sub";
@@ -77,7 +77,7 @@ string regs2str(MIPS_REGS reg) {
 	default:	return NULL;
 	}
 }
-string regs2num(MIPS_REGS reg) {
+char* regs2num(MIPS_REGS reg) {
 	switch (reg) {
 	case zero:	return "$0";
 	case at:	return "$1";
@@ -143,7 +143,7 @@ void gen_mips(FILE* fp, MIPS_CODE code) {
 		break;
 	}
 	case beq:
-	case bne:
+	case bne:{
 		fprintf(fp, "%s %s %s %s\n", instr2str(code.instr), rs, rt, label_name);
 		break;
 	}

@@ -6,11 +6,12 @@
 //extern static char temp_regs[10][3] = { "t0","t1","t2","t3","t4","t5","t6","t7","t8","t9" };
 
 typedef enum {
-	add = 1, sub, mult, div,
+	add = 0, sub, mult, div,
 	eq, neq, bgt, beq, lst, leq,
 	assign, assign_const, assign_var,
-	get_addr, write_addr,
-	var_declare,
+	get_addr, 
+	//write_addr,
+	//var_declare,
 	save_temp, reload_temp,
 	write_stack, read_stack,
 	jump, jump_ifnz, jump_ifz, jump_link, jump_backto,
