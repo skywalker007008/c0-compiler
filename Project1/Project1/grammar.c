@@ -40,6 +40,9 @@ VAR global_var;
 FUNC* now_func;	//可以用来做函数调用时的优化使用
 int func_num;
 
+/*Global vars about statement on regs_allocation*/
+int use_regs;
+
 /* This file contains functions about the process of grammar analysis. */
 
 void read_symbol() {
@@ -310,7 +313,7 @@ int is_const_define(int pl, FUNC* func){			//If it is const's definition sentenc
 				error(args_redefined);
 			}
 			LIST_INSERT_CONSTS(func->cons, store_const->hash, func->cons_num, i);
-			INSERT_4_STATE(func, assign, int2str(num), NULL, name, NULL);	//	插一条常量赋值进去
+			INSERT_4_STATE(func, assign_const, int2str(num), NULL, name, NULL);	//	插一条常量赋值进去
 			//插入结束
 			//reserved.h中有封装版本
 
@@ -348,10 +351,10 @@ int is_const_define(int pl, FUNC* func){			//If it is const's definition sentenc
 			if (i == FIND) {
 				error(args_redefined);
 			}
-			LIST_INSERT_CONSTS(func->cons, store_const->hash, func->cons_num, i);
+			LIST_INSERT_CONSTS(func->cons, store_const, func->cons_num, i);
 			//插入结束
 			//reserved.h中有封装版本
-			INSERT_4_STATE(func, assign, int2str((int)num), 0, name, NULL);	//	插一条常量赋值进去
+			INSERT_4_STATE(func, assign_const, int2str((int)num), 0, name, NULL);	//	插一条常量赋值进去
 			read_symbol();
 			sym = now_symbol->symbol_type;
 			if (sym != comma) {
@@ -365,7 +368,7 @@ int is_const_define(int pl, FUNC* func){			//If it is const's definition sentenc
 
 /*声明头部判断*/
 
-int is_head_declare(int pl, int* type, string* name) {	//type返回函数的返回值类型
+int is_head_declare(int pl, int* type, char* name) {	//type返回函数的返回值类型
 	int judge;
 	int start_line, end_line;
 	start_line = now_symbol->line;
@@ -434,7 +437,7 @@ int is_var_define(int pl, FUNC* func){			//If it is var's definition
 	//int judge;
 	int start_line,end_line;
 	int type;
-	string name;
+	char* name;
 	VAR** temp_var;
 	VAR* store_var;
 	int array_len = 0;
@@ -450,7 +453,8 @@ int is_var_define(int pl, FUNC* func){			//If it is var's definition
 		if(sym != ident){
 			error();
 		}
-		strcpy(name, now_symbol->symbol_name);
+		//strcpy(name, now_symbol->symbol_name);
+		name = now_symbol->symbol_name;
 		read_symbol();
 		if(sym == lbrace){	//读入到了一个中括号，数组模式
 			read_symbol();
@@ -476,6 +480,9 @@ int is_var_define(int pl, FUNC* func){			//If it is var's definition
 		LIST_INSERT_VARS(func->vars, store_var->hash, func->vars_num, i);
 		//插入结束
 		//reserved.h中有封装版本
+		//最好是对变量都有个赋初始值的过程
+		INSERT_4_STATE(func, assign_var, "0", NULL, name, NULL);
+
 		//紧接着了，都是要判断逗号了。
 		if(sym != comma){
 			end_line = last_symbol->line;
@@ -779,6 +786,8 @@ int is_if_sentence(int pl, FUNC* func){
 		error();
 	}
 	read_symbol();
+	//加一个if开始的说明吧
+	INSERT_4_STATE(func, set_label, NULL, NULL, NULL, string_add2(func->name, "startif"));
 	judge = is_condition(sym_pl, func);
 	//v0是条件的结果
 	INSERT_4_STATE(func, jump_ifz, "v0", NULL, NULL, string_add2(func->name, "else"));	//添加一个有关条件跳转的四元式
@@ -1311,6 +1320,9 @@ int is_sentence(int pl, FUNC* func){
 		temp_symbol = now_symbol -> next_symbol;
 		temp_sym = temp_symbol->symbol_type;
 		if(temp_sym == split){
+			//保存现场在这里
+			//暂时先只输出save_temp吧
+			INSERT_4_STATE(func, save_temp, NULL, NULL, NULL, func->name);
 			judge = is_func_usage(sym_pl, func);
 			if(judge != MATCH){
 				error();
@@ -1318,12 +1330,15 @@ int is_sentence(int pl, FUNC* func){
 			if(sym != split){
 				error();
 			}
+			//在这里恢复现场
+			INSERT_4_STATE(func, reload_temp, NULL, NULL, NULL, func->name);
 			read_symbol();
 			end_line = last_symbol->line;
 			fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a sentence(no_args_func_usage).\n", start_line, end_line, pl, sym_pl - 1);
 			return MATCH;
 		}
 		if(temp_sym == lparent){
+			INSERT_4_STATE(func, save_temp, NULL, NULL, NULL, func->name);
 			judge = is_func_usage(sym_pl, func);
 			if(judge != MATCH){
 				error();
@@ -1332,6 +1347,7 @@ int is_sentence(int pl, FUNC* func){
 				error();
 			}
 			read_symbol();
+			INSERT_4_STATE(func, reload_temp, NULL, NULL, NULL, func->name);
 			end_line = last_symbol->line;
 			fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a sentence(with_args_func_usage).\n", start_line, end_line, pl, sym_pl - 1);
 			return MATCH;
@@ -1367,6 +1383,7 @@ int is_args_list(int pl, FUNC* func){
 	string name;
 	VAR* store_var;
 	VAR** temp_var;
+	int arg_num = 0;
 	start_line = now_symbol->line;
 	sym = now_symbol->symbol_type;
 	while(1){
@@ -1388,13 +1405,17 @@ int is_args_list(int pl, FUNC* func){
 		LIST_INSERT_VARS(func->vars, store_var->hash, func->vars_num, i);
 		//插入结束
 		//reserved.h中有封装版本
+		//他们作为了一个函数的最初的变量集合
+		//所以取结果的时候……就……取这些个就行了啊
 
 		read_symbol();
 		if(sym != comma){	//没有逗号，就结束吧
 			end_line = last_symbol->line;
 			fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is an args_list.\n", start_line, end_line, pl, sym_pl - 1);
+			func->args_num = arg_num;
 			return MATCH;	
 		}
+		arg_num++;	//记录参数个数，用于以后传值
 		read_symbol();
 	}	
 	return 0;
@@ -1402,77 +1423,119 @@ int is_args_list(int pl, FUNC* func){
 
 /*表达式*/
 
-int is_statement(int pl, FUNC* func){
+int is_statement(int pl, FUNC* func, int regs_start){
 	int judge;
 	int start_line, end_line;
+	int in_regs_num = regs_start;	//保存一下这个进来的寄存器值，传出去的时候还得用呢
+	int is_add = 1;	//有没有取反
 	start_line = now_symbol->line;
 	sym = now_symbol->symbol_type;
 
 	if(sym == addsy || sym == minussy){
+		is_add = sym == addsy ? 1 : -1;
 		read_symbol();
 	}
-	judge = is_part(sym_pl, func);
+	judge = is_part(sym_pl, func, regs_start);	
+	//先将这个项的结果保存在允许的起始寄存器中。
+	//实际上可以优化的
+	if (is_add == 1) {
+		INSERT_4_STATE(func, assign, "v0", NULL, int2regs(in_regs_num), NULL);	//这里，以后优化生成mips的时候是可以拿掉很多多余的赋值语句的。
+	}
+	else {
+		INSERT_4_STATE(func, sub, "0", "v0", int2regs(in_regs_num), NULL);
+	}
+	//其实不需要上面那种结构，理论上已经有结果存储在项的t_regs_start中了
+	//不过用一下比较保险吧
+	//之后再讨论什么优化的问题，还是先统一返回在v0里面
 	if(judge != MATCH){
 		error();
 	}
+	//在这之后的……就都只能使用后面的那个保存结果了
+	//regs_start++;	//预留操作
 	while(1){
 		if(sym != addsy && sym != minussy){	//结束了，就一个项
 			end_line = last_symbol->line;
 			fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a statement.\n", start_line, end_line, pl, sym_pl - 1);
+			//regs_start--;	//预留操作
+			INSERT_4_STATE(func, assign, int2regs(in_regs_num), NULL, "v0", NULL);	//V0 = T0
 			return MATCH;
 		}
+		is_add = sym == addsy ? 1 : -1;
+
 		read_symbol();
-		judge = is_part(sym_pl, func);
+		judge = is_part(sym_pl, func, regs_start + 1);
 		if(judge != MATCH){
 			error();
+		}
+		if (is_add == 1) {
+			INSERT_4_STATE(func, add, int2reg(in_regs_num), "v0", int2reg(in_regs_num), NULL);	//T0 = T0 + V0
+		}
+		else if (is_add == -1) {
+			INSERT_4_STATE(func, sub, int2reg(in_regs_num), "v0", int2reg(in_regs_num), NULL);	//T0 = T0 - V0
 		}
 	}
 }
 
 /*项*/
 
-int is_part(int pl, FUNC* func){					//If it is "项"
+int is_part(int pl, FUNC* func, int regs_start){					//If it is "项"
 	int judge = 0;
 	int start_line, end_line;
+	int in_regs_num = regs_start;	//允许使用的第一个寄存器
+	int is_mult;
 	start_line = now_symbol->line;
 	sym = now_symbol->symbol_type;
 
-	judge = is_factor(sym_pl, func);
+	judge = is_factor(sym_pl, func, in_regs_num);
 	if(judge != MATCH){
 		error();
 	}
+	INSERT_4_STATE(func, assign, "v0", NULL, int2reg(in_regs_num), NULL);
+
 	while(1){	//多个因子相乘
 		if(sym != multsy && sym != divsy){	//end
 			end_line = last_symbol->line;
 			fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a part.\n", start_line, end_line, pl, sym_pl - 1);
+			INSERT_4_STATE(func, assign, int2reg(in_regs_num), NULL, "v0", NULL);
 			return MATCH;
 		}
+		is_mult = sym == multsy ? 1 : -1;
 		read_symbol();
-		judge = is_factor(sym_pl, func);
+		judge = is_factor(sym_pl, func, in_regs_num + 1);
 		if(judge != MATCH){
 			error();
+		}
+		if (is_mult == 1) {
+			INSERT_4_STATE(func, mult, int2reg(in_regs_num), int2reg(in_regs_num + 1), int2reg(in_regs_num), NULL);
+		}
+		else {
+			INSERT_4_STATE(func, div, int2reg(in_regs_num), int2reg(in_regs_num + 1), int2reg(in_regs_num), NULL);
 		}
 	}
 }
 
 /*因子*/
 
-int is_factor(int pl, FUNC* func) {				//If it is a factor（因子）
+int is_factor(int pl, FUNC* func, int regs_start) {				//If it is a factor（因子）
 	int judge;
 	int start_line, end_line;
 	int num;
-	string name;
+	int in_regs_num = regs_start;
+	char* name;
 	FUNC* temp_func;
 	sym = now_symbol->symbol_type;
 	start_line = now_symbol->line;
 
 	if(sym == ident){	//标识符，又返回函数定义
-		strcpy(name, now_symbol->symbol_name);
+		name = now_symbol->symbol_name;
+		//保存现场
+		INSERT_4_STATE(func, save_temp, NULL, NULL, NULL, NULL);
 		read_symbol();
 		if(sym == lparent){
 			
 			read_symbol();
 			judge = is_value_args_list(sym_pl, func);
+			
 			if (LIST_SEARCH_FUNCS(name, &temp_func) != FIND) {
 				error(args_undefined);
 			}
@@ -1485,31 +1548,46 @@ int is_factor(int pl, FUNC* func) {				//If it is a factor（因子）
 			if(judge != MATCH){
 				error();
 			}
+			INSERT_4_STATE(func, jump_link, NULL, NULL, NULL, name);
+			//按照顺序接下来应该是把寄存器恢复现场
+			INSERT_4_STATE(func, reload_temp, NULL, NULL, NULL, NULL);
+			//然后就应该……把v0的值传出来
+			//INSERT_4_STATE(func, assign, "v0", NULL, int2reg(in_regs_num), NULL);
+			//由于还要存到v0,就不用赋值了
 			if(sym != rparent){
 				error();
 			}
 			read_symbol();
 			end_line = last_symbol->line;
 			fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a factor.\n", start_line, end_line, pl, sym_pl - 1);
+			//返回那个结果到v0，
 			return MATCH;
 		}
 		else if(sym == lbrace){
 			read_symbol();
-			judge = is_statement(sym_pl, func);	//根据一个全局变量可以判断越界问题（实际上不是在这里能判断的）
+			judge = is_statement(sym_pl, func, in_regs_num + 1);	//根据一个全局变量可以判断越界问题（实际上不是在这里能判断的）
+			
 			if(judge != MATCH){
 				error();
 			}
 			if(sym != rbrace){
 				error();
 			}
+			//计算地址偏移
+			INSERT_4_STATE(func, get_addr, name, "v0", "t8", NULL);
+			//取里面的数
+			INSERT_4_STATE(func, read_stack, "t8", "1_int0", int2reg(in_regs_num), NULL);
+			//INSERT_4_STATE(func, read_stack, "t8", "1_int0", "v0", NULL);
 			read_symbol();
 			end_line = last_symbol->line;
 			fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a factor.\n", start_line, end_line, pl, sym_pl - 1);
+			//INSERT_4_STATE(func, assign, "int2reg(in_regs_num)", NULL, "v0", NULL);
 			return MATCH;
 		}
 		else{
 			end_line = last_symbol->line;
 			fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a factor.\n", start_line, end_line, pl, sym_pl - 1);
+			INSERT_4_STATE(func, assign, int2reg(in_regs_num), NULL, "v0", NULL);
 			return MATCH;
 		}
 	}
@@ -1522,6 +1600,7 @@ int is_factor(int pl, FUNC* func) {				//If it is a factor（因子）
 		if(sym != rparent){
 			error();
 		}
+		INSERT_4_STATE(func, assign, "v0", NULL, int2reg(in_regs_num), NULL);
 		read_symbol();
 		end_line = last_symbol->line;
 		fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a factor.\n", start_line, end_line, pl, sym_pl - 1);
@@ -1532,12 +1611,15 @@ int is_factor(int pl, FUNC* func) {				//If it is a factor（因子）
 		if(judge != MATCH){
 			error();
 		}
+		INSERT_4_STATE(func, assign, int2str(num), NULL, "v0", NULL);
 		end_line = last_symbol->line;
 		fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a factor.\n", start_line, end_line, pl, sym_pl - 1);
 		return MATCH;
 	}
 	else if(sym == alphasy){
+		INSERT_4_STATE(func, assign, int2str((int)now_symbol->symbol_num), NULL, "v0", NULL);
 		read_symbol();
+		
 		end_line = last_symbol->line;
 		fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a factor.\n", start_line, end_line, pl, sym_pl - 1);
 		return MATCH;
@@ -1550,27 +1632,44 @@ int is_factor(int pl, FUNC* func) {				//If it is a factor（因子）
 /*条件*/
 
 int is_condition(int pl, FUNC* func){
+	//返回结果在v0中
 	int judge;
 	int start_line, end_line;
+	int label;	//区分判断类型的
 	sym = now_symbol->symbol_type;
 	start_line = now_symbol -> line;
 
-	judge = is_statement(sym_pl, func);
+	judge = is_statement(sym_pl, func, 0);
 	if(judge != MATCH){
 		error();
 	}
 	if(sym == leqsy || sym == lstsy || sym == bgtsy || sym == beqsy || sym == eqsy || sym == neqsy){
+		INSERT_4_STATE(func, assign, "v0", NULL, "t0", NULL);
+		label = sym;
+		//出现条件的地方，应该是不怎么影响那个叫t0的东西
 		read_symbol();
-		judge = is_statement(sym_pl, func);
+		judge = is_statement(sym_pl, func, 1);	//不过这里就得从1开始了
 		if(judge != MATCH){
 			error();
 		}
 		end_line = last_symbol->line;
 		fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a condition.\n", start_line, end_line, pl, sym_pl - 1);
+		//比较结果放到v0里面
+		switch (label) {
+		case leqsy: {INSERT_4_STATE(func, leq, "t0", "t1", "v0", NULL); break; }
+		case lstsy: {INSERT_4_STATE(func, lst, "t0", "t1", "v0", NULL); break; }
+		case beqsy: {INSERT_4_STATE(func, beq, "t0", "t1", "v0", NULL); break; }
+		case bgtsy: {INSERT_4_STATE(func, bgt, "t0", "t1", "v0", NULL); break; }
+		case eqsy: {INSERT_4_STATE(func, eq, "t0", "t1", "v0", NULL); break; }
+		case neqsy: {INSERT_4_STATE(func, neq, "t0", "t1", "v0", NULL); break; }
+		default:
+			error();
+		}
 		return MATCH;
 	}
 	else{
 		end_line = last_symbol->line;
+		//反正也是在v0,就不需要再存了
 		fprintf(fp_gram,"Line %d ~ %d:\t%d ~ %d:\tThis is a condition.\n", start_line, end_line, pl, sym_pl - 1);
 		return MATCH;
 	}

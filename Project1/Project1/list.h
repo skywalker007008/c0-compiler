@@ -22,13 +22,15 @@
 //(1)函数部分
 typedef struct {	
 	char* name;	//函数的名字
+	int type;	//返回值的类型
 	CODE4* first_code4;	//第一个4元式
 	CODE4* last_code4;	//最后一个4元式
 	CONST* cons;//函数需要的所有常量
 	VAR* vars;	//函数需要的所有变量
+	int args_num;//函数需要的参数个数
 	int cons_num;	//函数的常量个数
 	int vars_num;	//函数的变量个数
-	int type;	//返回值的类型
+	
 }FUNC;
 
 //(2)常量部分
